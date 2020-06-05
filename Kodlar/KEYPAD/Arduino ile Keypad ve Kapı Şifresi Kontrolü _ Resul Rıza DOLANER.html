@@ -1,0 +1,1016 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0072)http://www.resuldolaner.com/arduino-ile-keypad-ve-kapi-sifresi-kontrolu/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr-TR"><head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/1.txt"></script><script type="text/javascript" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/1(1).txt"></script>
+
+
+<title>  Arduino ile Keypad ve Kapı Şifresi Kontrolü | Resul Rıza DOLANER</title>
+<link rel="stylesheet" href="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/print.css" type="text/css" media="print">
+<!--[if IE]><link rel="stylesheet" href="http://www.resuldolaner.com/wp-content/themes/118/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+<link rel="stylesheet" href="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/style.css" type="text/css" media="screen">
+<!--[if IE 6]>
+	<script src="http://www.resuldolaner.com/wp-content/themes/118/js/pngfix.js"></script>
+<![endif]--> 
+<link rel="alternate" type="application/rss+xml" title="Resul Rıza DOLANER RSS Feed" href="http://www.resuldolaner.com/feed/">
+<link rel="alternate" type="application/atom+xml" title="Resul Rıza DOLANER Atom Feed" href="http://www.resuldolaner.com/feed/atom/">
+<link rel="pingback" href="http://www.resuldolaner.com/xmlrpc.php">
+
+<script id="twitter-wjs" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/widgets.js.indir"></script><script src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/mootools-1.2.5-core-yc.js.indir" type="text/javascript"></script>
+<link rel="stylesheet" href="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/MenuMatic.css" type="text/css" media="screen" charset="utf-8">
+<!--[if lt IE 7]>
+	<link rel="stylesheet" href="http://www.resuldolaner.com/wp-content/themes/118/menu/MenuMatic-ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+<!-- Load the MenuMatic Class -->
+<script src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/MenuMatic_0.68.3.js.indir" type="text/javascript" charset="utf-8"></script>
+
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Resul Rıza DOLANER » Arduino ile Keypad ve Kapı Şifresi Kontrolü yorum beslemesi" href="http://www.resuldolaner.com/arduino-ile-keypad-ve-kapi-sifresi-kontrolu/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.resuldolaner.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.6"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/wp-emoji-release.min.js.indir" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-pagenavi-css" href="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/pagenavi-css.css" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+window.CKEDITOR_BASEPATH = "http://www.resuldolaner.com/wp-content/plugins/ckeditor-for-wordpress/ckeditor/";
+var ckeditorSettings = { "textarea_id": "comment", "pluginPath": "http:\/\/www.resuldolaner.com\/wp-content\/plugins\/ckeditor-for-wordpress\/", "autostart": true, "excerpt_state": false, "qtransEnabled": false, "outputFormat": { "indent": true, "breakBeforeOpen": true, "breakAfterOpen": true, "breakBeforeClose": true, "breakAfterClose": true }, "configuration": { "height": "160px", "skin": "moono", "scayt_autoStartup": false, "entities": true, "entities_greek": true, "entities_latin": true, "toolbar": "WordpressBasic", "templates_files": [ "http:\/\/www.resuldolaner.com\/wp-content\/plugins\/ckeditor-for-wordpress\/ckeditor.templates.js" ], "stylesCombo_stylesSet": "wordpress:http:\/\/www.resuldolaner.com\/wp-content\/plugins\/ckeditor-for-wordpress\/ckeditor.styles.js", "allowedContent": true, "customConfig": "http:\/\/www.resuldolaner.com\/wp-content\/plugins\/ckeditor-for-wordpress\/ckeditor.config.js" }, "externalPlugins": [  ], "additionalButtons": [  ] }
+/* ]]> */
+</script><style type="text/css">
+			#content table.cke_editor { margin:0; }
+			#content table.cke_editor tr td { padding:0;border:0; }
+		</style><script type="text/javascript" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/ckeditor.js.indir"></script><style>.cke{visibility:hidden;}</style>
+<script type="text/javascript" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/jquery.js.indir"></script>
+<script type="text/javascript" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/jquery-migrate.min.js.indir"></script>
+<script type="text/javascript" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/ckeditor.utils.js.indir"></script>
+<link rel="https://api.w.org/" href="http://www.resuldolaner.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.resuldolaner.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.resuldolaner.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Xcode:  ERROR ITMS-90475: “Invalid Bundle. iPad Multitasking support requires launch storyboard in bundle” Xcode Hatası" href="http://www.resuldolaner.com/xcode-error-itms-90475-invalid-bundle-ipad-multitasking-support-requires-launch-storyboard-in-bundle-hatasi/">
+<link rel="next" title="Outlook İmza Bölümü Açılmama Sorunu" href="http://www.resuldolaner.com/outlook-imza-bolumu-acilmama-sorunu/">
+<meta name="generator" content="WordPress 4.9.6">
+<link rel="canonical" href="http://www.resuldolaner.com/arduino-ile-keypad-ve-kapi-sifresi-kontrolu/">
+<link rel="shortlink" href="http://www.resuldolaner.com/?p=825">
+<link rel="alternate" type="application/json+oembed" href="http://www.resuldolaner.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.resuldolaner.com%2Farduino-ile-keypad-ve-kapi-sifresi-kontrolu%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://www.resuldolaner.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.resuldolaner.com%2Farduino-ile-keypad-ve-kapi-sifresi-kontrolu%2F&amp;format=xml">
+<link rel="stylesheet" type="text/css" href="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/wp-code-highlight.css" media="screen">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<style type="text/css">.at-icon{fill:#fff;border:0}.at-icon-wrapper{display:inline-block;overflow:hidden}a .at-icon-wrapper{cursor:pointer}.at-rounded,.at-rounded-element .at-icon-wrapper{border-radius:12%}.at-circular,.at-circular-element .at-icon-wrapper{border-radius:50%}.addthis_32x32_style .at-icon{width:2pc;height:2pc}.addthis_24x24_style .at-icon{width:24px;height:24px}.addthis_20x20_style .at-icon{width:20px;height:20px}.addthis_16x16_style .at-icon{width:1pc;height:1pc}#at16lb{display:none;position:absolute;top:0;left:0;width:100%;height:100%;z-index:1001;background-color:#000;opacity:.001}#at_complete,#at_error,#at_share,#at_success{position:static!important}.at15dn{display:none}#at15s,#at16p,#at16p form input,#at16p label,#at16p textarea,#at_share .at_item{font-family:arial,helvetica,tahoma,verdana,sans-serif!important;font-size:9pt!important;outline-style:none;outline-width:0;line-height:1em}* html #at15s.mmborder{position:absolute!important}#at15s.mmborder{position:fixed!important;width:250px!important}#at15s{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);float:none;line-height:1em;margin:0;overflow:visible;padding:5px;text-align:left;position:absolute}#at15s a,#at15s span{outline:0;direction:ltr;text-transform:none}#at15s .at-label{margin-left:5px}#at15s .at-icon-wrapper{width:1pc;height:1pc;vertical-align:middle}#at15s .at-icon{width:1pc;height:1pc}.at4-icon{display:inline-block;background-repeat:no-repeat;background-position:top left;margin:0;overflow:hidden;cursor:pointer}.addthis_16x16_style .at4-icon,.addthis_default_style .at4-icon,.at4-icon,.at-16x16{width:1pc;height:1pc;line-height:1pc;background-size:1pc!important}.addthis_32x32_style .at4-icon,.at-32x32{width:2pc;height:2pc;line-height:2pc;background-size:2pc!important}.addthis_24x24_style .at4-icon,.at-24x24{width:24px;height:24px;line-height:24px;background-size:24px!important}.addthis_20x20_style .at4-icon,.at-20x20{width:20px;height:20px;line-height:20px;background-size:20px!important}.at4-icon.circular,.circular .at4-icon,.circular.aticon{border-radius:50%}.at4-icon.rounded,.rounded .at4-icon{border-radius:4px}.at4-icon-left{float:left}#at15s .at4-icon{text-indent:20px;padding:0;overflow:visible;white-space:nowrap;background-size:1pc;width:1pc;height:1pc;background-position:top left;display:inline-block;line-height:1pc}.addthis_vertical_style .at4-icon,.at4-follow-container .at4-icon{margin-right:5px}html>body #at15s{width:250px!important}#at15s.atm{background:none!important;padding:0!important;width:10pc!important}#at15s_inner{background:#fff;border:1px solid #fff;margin:0}#at15s_head{position:relative;background:#f2f2f2;padding:4px;cursor:default;border-bottom:1px solid #e5e5e5}.at15s_head_success{background:#cafd99!important;border-bottom:1px solid #a9d582!important}.at15s_head_success a,.at15s_head_success span{color:#000!important;text-decoration:none}#at15s_brand,#at15sptx,#at16_brand{position:absolute}#at15s_brand{top:4px;right:4px}.at15s_brandx{right:20px!important}a#at15sptx{top:4px;right:4px;text-decoration:none;color:#4c4c4c;font-weight:700}#at15sptx:hover{text-decoration:underline}#at16_brand{top:5px;right:30px;cursor:default}#at_hover{padding:4px}#at_hover .at_item,#at_share .at_item{background:#fff!important;float:left!important;color:#4c4c4c!important}#at_share .at_item .at-icon-wrapper{margin-right:5px}#at_hover .at_bold{font-weight:700;color:#000!important}#at_hover .at_item{width:7pc!important;padding:2px 3px!important;margin:1px;text-decoration:none!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover{margin:0!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover,#at_share .at_item.athov,#at_share .at_item:hover{background:#f2f2f2!important;border:1px solid #e5e5e5;color:#000!important;text-decoration:none}.ipad #at_hover .at_item:focus{background:#fff!important;border:1px solid #fff}.at15t{display:block!important;height:1pc!important;line-height:1pc!important;padding-left:20px!important;background-position:0 0;text-align:left}.addthis_button,.at15t{cursor:pointer}.addthis_toolbox a.at300b,.addthis_toolbox a.at300m{width:auto}.addthis_toolbox a{margin-bottom:5px;line-height:initial}.addthis_toolbox.addthis_vertical_style{width:200px}.addthis_button_facebook_like .fb_iframe_widget{line-height:100%}.addthis_button_facebook_like iframe.fb_iframe_widget_lift{max-width:none}.addthis_toolbox a.addthis_button_counter,.addthis_toolbox a.addthis_button_facebook_like,.addthis_toolbox a.addthis_button_facebook_send,.addthis_toolbox a.addthis_button_facebook_share,.addthis_toolbox a.addthis_button_foursquare,.addthis_toolbox a.addthis_button_google_plusone,.addthis_toolbox a.addthis_button_linkedin_counter,.addthis_toolbox a.addthis_button_pinterest_pinit,.addthis_toolbox a.addthis_button_stumbleupon_badge,.addthis_toolbox a.addthis_button_tweet{display:inline-block}.at-share-tbx-element .google_plusone_iframe_widget>span>div{vertical-align:top!important}.addthis_toolbox span.addthis_follow_label{display:none}.addthis_toolbox.addthis_vertical_style span.addthis_follow_label{display:block;white-space:nowrap}.addthis_toolbox.addthis_vertical_style a{display:block}.addthis_toolbox.addthis_vertical_style.addthis_32x32_style a{line-height:2pc;height:2pc}.addthis_toolbox.addthis_vertical_style .at300bs{margin-right:4px;float:left}.addthis_toolbox.addthis_20x20_style span{line-height:20px}.addthis_toolbox.addthis_32x32_style span{line-height:2pc}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact,.addthis_toolbox.addthis_pill_combo_style a{float:left}.addthis_toolbox.addthis_pill_combo_style a.addthis_button_tweet{margin-top:-2px}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact{margin-right:4px}.addthis_default_style .addthis_separator{margin:0 5px;display:inline}div.atclear{clear:both}.addthis_default_style .addthis_separator,.addthis_default_style .at4-icon,.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300bs,.addthis_default_style .at300m{float:left}.at300b img,.at300bo img{border:0}a.at300b .at4-icon,a.at300m .at4-icon{display:block}.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300m{padding:0 2px}.at300b,.at300bo,.at300bs,.at300m{cursor:pointer}.addthis_button_facebook_like.at300b:hover,.addthis_button_facebook_like.at300bs:hover,.addthis_button_facebook_send.at300b:hover,.addthis_button_facebook_send.at300bs:hover{opacity:1}.addthis_20x20_style .at15t,.addthis_20x20_style .at300bs{overflow:hidden;display:block;height:20px!important;width:20px!important;line-height:20px!important}.addthis_32x32_style .at15t,.addthis_32x32_style .at300bs{overflow:hidden;display:block;height:2pc!important;width:2pc!important;line-height:2pc!important}.at300bs{overflow:hidden;display:block;background-position:0 0;height:1pc;width:1pc;line-height:1pc!important}.addthis_default_style .at15t_compact,.addthis_default_style .at15t_expanded{margin-right:4px}#at_share .at_item{width:123px!important;padding:4px;margin-right:2px;border:1px solid #fff}#at16p{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);z-index:10000001;position:absolute;top:50%;left:50%;width:300px;padding:10px;margin:0 auto;margin-top:-185px;margin-left:-155px;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#5e5e5e}#at_share{margin:0;padding:0}#at16pt{position:relative;background:#f2f2f2;height:13px;padding:5px 10px}#at16pt a,#at16pt h4{font-weight:700}#at16pt h4{display:inline;margin:0;padding:0;font-size:9pt;color:#4c4c4c;cursor:default}#at16pt a{position:absolute;top:5px;right:10px;color:#4c4c4c;text-decoration:none;padding:2px}#at15sptx:focus,#at16pt a:focus{outline:thin dotted}#at15s #at16pf a{top:1px}#_atssh{width:1px!important;height:1px!important;border:0!important}.atm{width:10pc!important;padding:0;margin:0;line-height:9pt;letter-spacing:normal;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#444;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);padding:4px}.atm-f{text-align:right;border-top:1px solid #ddd;padding:5px 8px}.atm-i{background:#fff;border:1px solid #d5d6d6;padding:0;margin:0;box-shadow:1px 1px 5px rgba(0,0,0,.15)}.atm-s{margin:0!important;padding:0!important}.atm-s a:focus{border:transparent;outline:0;transition:none}#at_hover.atm-s a,.atm-s a{display:block;text-decoration:none;padding:4px 10px;color:#235dab!important;font-weight:400;font-style:normal;transition:none}#at_hover.atm-s .at_bold{color:#235dab!important}#at_hover.atm-s a:hover,.atm-s a:hover{background:#2095f0;text-decoration:none;color:#fff!important}#at_hover.atm-s .at_bold{font-weight:700}#at_hover.atm-s a:hover .at_bold{color:#fff!important}.atm-s a .at-label{vertical-align:middle;margin-left:5px;direction:ltr}.at_PinItButton{display:block;width:40px;height:20px;padding:0;margin:0;background-image:url(//s7.addthis.com/static/t00/pinit00.png);background-repeat:no-repeat}.at_PinItButton:hover{background-position:0 -20px}.addthis_toolbox .addthis_button_pinterest_pinit{position:relative}.at-share-tbx-element .fb_iframe_widget span{vertical-align:baseline!important}#at16pf{height:auto;text-align:right;padding:4px 8px}.at-privacy-info{position:absolute;left:7px;bottom:7px;cursor:pointer;text-decoration:none;font-family:helvetica,arial,sans-serif;font-size:10px;line-height:9pt;letter-spacing:.2px;color:#666}.at-privacy-info:hover{color:#000}.body .wsb-social-share .wsb-social-share-button-vert{padding-top:0;padding-bottom:0}.body .wsb-social-share.addthis_counter_style .addthis_button_tweet.wsb-social-share-button{padding-top:40px}.body .wsb-social-share.addthis_counter_style .addthis_button_google_plusone.wsb-social-share-button{padding-top:0}.body .wsb-social-share.addthis_counter_style .addthis_button_facebook_like.wsb-social-share-button{padding-top:21px}@media print{#at4-follow,#at4-share,#at4-thankyou,#at4-whatsnext,#at4m-mobile,#at15s,.at4,.at4-recommended{display:none!important}}@media screen and (max-width:400px){.at4win{width:100%}}@media screen and (max-height:700px) and (max-width:400px){.at4-thankyou-inner .at4-recommended-container{height:122px;overflow:hidden}.at4-thankyou-inner .at4-recommended .at4-recommended-item:first-child{border-bottom:1px solid #c5c5c5}}</style><style type="text/css">.at-branding-logo{font-family:helvetica,arial,sans-serif;text-decoration:none;font-size:10px;display:inline-block;margin:2px 0;letter-spacing:.2px}.at-branding-logo .at-branding-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////+GlNUkcc1QAAAB1JREFUeNpiYIQDBjQmAwMmkwEM0JnY1WIxFyDAABGeAFEudiZsAAAAAElFTkSuQmCC")}.at-branding-logo .at-branding-icon,.at-branding-logo .at-privacy-icon{display:inline-block;height:10px;width:10px;margin-left:4px;margin-right:3px;margin-bottom:-1px;background-repeat:no-repeat}.at-branding-logo .at-privacy-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAMAAABR24SMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRF8fr9ot/xXcfn2/P5AKva////////AKTWodjhjAAAAAd0Uk5T////////ABpLA0YAAAA6SURBVHjaJMzBDQAwCAJAQaj7b9xifV0kUKJ9ciWxlzWEWI5gMF65KUTv0VKkjVeTerqE/x7+9BVgAEXbAWI8QDcfAAAAAElFTkSuQmCC")}.at-branding-logo span{text-decoration:none}.at-branding-logo .at-branding-addthis,.at-branding-logo .at-branding-powered-by{color:#666}.at-branding-logo .at-branding-addthis:hover{color:#333}.at-cv-with-image .at-branding-addthis,.at-cv-with-image .at-branding-addthis:hover{color:#fff}a.at-branding-logo:visited{color:initial}.at-branding-info{display:inline-block;padding:0 5px;color:#666;border:1px solid #666;border-radius:50%;font-size:10px;line-height:9pt;opacity:.7;transition:all .3s ease;text-decoration:none}.at-branding-info span{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.at-branding-info:before{content:'i';font-family:Times New Roman}.at-branding-info:hover{color:#0780df;border-color:#0780df}</style><style type="text/css"></style><script type="text/javascript" charset="utf-8" async="" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/timeline.35155ed6aa6e065422c11b2526f1caf9.js.indir"></script><style type="text/css">/*.lleo_errorSelection *::-moz-selection,
+.lleo_errorSelection *::selection,
+.lleo_errorSelection *::-webkit-selection {
+    background-color: red !important;
+    color: #fff !important;;
+}*/
+
+#lleo_dialog,
+#lleo_dialog * {
+    color: #000 !important;
+    font: normal 13px Arial, Helvetica !important;
+    line-height: 15px !important;
+    margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none 0 !important;
+	position: static !important;
+	vertical-align: baseline !important;
+	overflow: visible !important;
+	width: auto !important;
+	height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+	float: none !important;
+	visibility: visible !important;
+	text-align: left !important;
+    text-transform: none !important;
+	border-collapse: separate !important;
+	border-spacing: 2px !important;
+    box-sizing: content-box !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    filter: none !important;
+}
+#lleo_dialog *:before,
+#lleo_dialog *:after {
+    content: '';
+}
+
+#lleo_dialog iframe {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+#lleo_dialog {
+    position: absolute !important;
+    background: #fff !important;
+    border: solid 1px #ccc !important;
+    padding: 7px 0 0 !important;
+    left: -999px;
+    top: -999px;
+    width: 440px !important;
+    overflow: hidden;
+    display: block !important;
+    z-index: 999999999 !important;
+    box-shadow: 8px 16px 30px rgba(0, 0, 0, 0.16) !important;
+    border-radius: 3px !important;
+    opacity: 0 !important;
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    transform: translateY(15px);
+}
+#lleo_dialog.lleo_show_small {
+    width: 150px !important;
+}
+#lleo_dialog.lleo_show {
+    opacity: 1 !important;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s !important;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s !important;
+    -ms-transition: -ms-transform 0.3s, opacity 0.3s !important;
+    -o-transition: -o-transform 0.3s, opacity 0.3s !important;
+    transition: transform 0.3s, opacity 0.3s !important;
+}
+#lleo_dialog.lleo_collapse {
+    opacity: 0 !important;
+    -webkit-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -moz-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -ms-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -o-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s !important;
+    -ms-transition: -ms-transform 0.4s, opacity 0.4s !important;
+    -o-transition: -o-transform 0.4s, opacity 0.4s !important;
+    transition: transform 0.4s, opacity 0.4s !important;
+}
+#lleo_dialog input::-webkit-input-placeholder {
+    color: #aaa !important;
+}
+#lleo_dialog .lleo_has_pic #lleo_word {
+	margin-right: 80px !important;
+}
+#lleo_dialog #lleo_translationsContainer1 {
+	position: relative !important;
+}
+#lleo_dialog #lleo_translationsContainer2 {
+	padding: 7px 0 0 !important;
+	vertical-align: middle !important;
+}
+#lleo_dialog #lleo_word {
+    color: #000 !important;
+    margin: 0 5px 2px 0 !important;
+    /*float: left !important;*/
+}
+#lleo_dialog .lleo_has_sound #lleo_word {
+    margin-left: 30px !important;
+}
+#lleo_dialog #lleo_text {
+    font-weight: bold !important;
+    color: #d56e00 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+/*
+#lleo_dialog #lleo_text.lleo_known {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+*/
+/*#lleo_dialog #lleo_closeBtn {
+    position: absolute !important;
+    right: 6px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 0 !important;
+    color: #aaa !important;
+    display: block !important;
+	z-index: 9999999999 !important;
+	width: 7px !important;
+	height: 7px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}*/
+
+#lleo_dialog #lleo_optionsBtn {
+    position: absolute !important; 
+    right: 3px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    color: #aaa !important;
+    padding: 2px !important;
+	display: none;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_optionsBtn {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_optionsBtn img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+#lleo_dialog #lleo_sound {
+    float: left !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 9px !important;
+    margin-right: 3px !important;
+    background: 0 0 no-repeat !important;
+    cursor: pointer !important;
+    display: none !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfNJREFUeNq0U01IVFEU/u57Oo5WhBRIBBptykWLYBa2soWiEKQQEbrSFsGbVRQKQc2iFqGitXqvjQxCoCJCqyI0aBUtZILaJNUuYWYWo8HovJ/707nP94bnz0rxwvfOuefd8517fi5TSuE4i50YwZ3l37ZhNlpgzFkaaM/G9sHF1YskNrT+7l4PjMOcb78t2JL71uxgB+2UlfxHTtq5N94fIOh/88kWgWfl73ZCSQkpeGg3H091JY6dI2S00qA/N3KO3dDUYhFgEmZGurG+w9FqApIHsVM7kaTF9Nhn0r8Q7hPWQgIRuNaH3AMUA4W/Lkdh04cpFS43G0TgxQTvCdMETVAk3KynIHwXZU/ge8XDt7KH9bKLjU0P2zVO5LsEpSejVRJ9UR18EtfqKegovs9R3Q6w9c/H1o4Aa2Jwm1lIvn9RJ4w9RdRRzqcYrpwycCll4Cy1lnkS3Bc6vfBg28v8aRIfI78zhB/1GygROH3jLyyzMQ0zlUZuZBSlKkeLoegGtTjYLcJ8pF+NakHOFC2J6w+f25mxSfWrWFF/ShXVPTGvtN14NNkVnxlYWJkgZEL7/vwKr55lKSVnaGYWkuYgrgG172uUv47+U7fw0EHaJXmalUQy/HqO6lBzEsVjJC4Q8kd6TETQpjuaGOvjv8b/AgwA/ij1XMx58NIAAAAASUVORK5CYII=) !important;
+}
+#lleo_dialog .lleo_has_sound #lleo_sound {
+    display: block !important;
+}
+
+#lleo_dialog #lleo_soundWave {
+    border: solid 5px #4495CC !important;
+    border-radius: 5px !important;
+    position: absolute !important;
+    left: -5px !important;
+    top: -5px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    z-index: 0 !important;
+    opacity: 0.9 !important;
+    display: none !important;
+}
+    #lleo_dialog #lleo_soundWave.lleo_beforePlaying {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_soundWave.lleo_playing {
+        opacity: 0 !important;
+        border-width: 20px !important;
+        border-radius: 30px !important;
+
+        -webkit-transform: scale(1.07,1.1) !important;
+        -moz-transform: scale(1.07,1.1) !important;
+        -ms-transform: scale(1.07,1.1) !important;
+        transform: scale(1.07,1.1) !important;
+
+        -webkit-transition: all 0.6s !important;
+        -moz-transition: all 0.6s !important;
+        -ms-transition: all 0.6s !important;
+        transition: all 0.6s !important;
+    }
+
+
+#lleo_dialog #lleo_picOuter {
+    position: absolute !important;
+    float: right !important;
+    top: 4px;
+    right: 5px;
+    z-index: 9 !important;
+    display: none !important;
+    width: 100px !important;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_picOuter {
+        right: 25px;
+    }
+#lleo_dialog .lleo_has_pic #lleo_picOuter {
+    display: block !important;
+}
+    #lleo_dialog #lleo_picOuter:hover {
+        width: auto !important;
+        z-index: 11 !important;
+    }
+#lleo_dialog #lleo_pic,
+#lleo_dialog #lleo_picBig {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    border: solid 2px #fff !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+    z-index: 1 !important;
+}
+#lleo_dialog #lleo_pic {
+	position: relative !important;
+    border: none !important;
+	width: 30px !important;
+}
+#lleo_dialog #lleo_picBig {
+    box-shadow: -1px 2px 4px rgba(0,0,0,0.3);
+    z-index: 2 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+    #lleo_dialog #lleo_picOuter:hover #lleo_picBig {
+        visibility: visible !important;
+        opacity: 1 !important;
+        -webkit-transition: opacity 0.3s !important;
+        -webkit-transition-delay: 0.3s !important;
+    }
+#lleo_dialog #lleo_transcription {
+    margin: 0 80px 4px 31px !important;
+    color: #aaaaaa !important;
+}
+#lleo_dialog .lleo_no_trans {
+    color: #aaa !important;
+}
+
+#lleo_dialog .ll-translation-counter {
+	float: right !important;
+    font-size: 11px !important;
+    color: #aaa !important;
+    padding: 2px 2px 1px 10px !important;
+}
+
+#lleo_dialog .ll-translation-text {
+	float: left !important;
+	/*width: 80% !important;*/
+}
+
+#lleo_dialog #lleo_trans a {
+    color: #3F669F !important;
+    text-decoration: none !important;
+    text-overflow: ellipsis !important;
+    padding: 1px 4px !important;
+    overflow: hidden !important;
+    float: left !important;
+    width: 320px !important;
+}
+
+#lleo_dialog .ll-translation-item {
+    color: #3F669F !important;
+    border: solid 1px #fff !important;
+    padding: 3px !important;
+    width: 100% !important;
+    float: left !important;
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+}
+
+#lleo_dialog .ll-translation-item:hover {
+	border: solid 1px #9FC2C9 !important;
+    background: #EDF4F6 !important;
+	cursor: pointer !important;
+}
+#lleo_dialog .ll-translation-item:hover .ll-translation-counter {
+	color: #83a0a6 !important;
+}
+
+#lleo_dialog .ll-translation-marker {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAWSURBVBhXY7RPm/+fAQkwIXNAbMICAJQ8AkvqWg/SAAAAAElFTkSuQmCC) !important;
+    display: inline-block !important;
+    width: 4px !important;
+    height: 4px !important;
+    margin: 7px 5px 2px 2px !important;
+    float: left !important;
+}
+
+#lleo_dialog #lleo_icons {
+    color: #aaa !important;
+    font-size: 11px !important;
+    background: #f8f8f8 !important;
+    padding: 10px 10px 10px 16px !important;
+}
+#lleo_icons a {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 10px -4px 3px !important;
+    text-decoration: none !important;
+    opacity: 0.5 !important;
+    background: url(data:image/png;base64,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) !important;
+}
+#lleo_icons a:hover {
+    opacity: 1 !important;
+}
+#lleo_icons a.lleo_google     {background-position:-34px 0 !important;}
+#lleo_icons a.lleo_multitran  {background-position:-64px 0 !important;}
+#lleo_icons a.lleo_lingvo     {background-position:-51px 0 !important; width: 12px !important;}
+#lleo_icons a.lleo_dict       {background-position:-17px 0 !important;}
+#lleo_icons a.lleo_linguee    {background-position:-81px 0 !important;}
+#lleo_icons a.lleo_michaelis  {background-position:-98px 0 !important;}
+
+#lleo_dialog #lleo_contextContainer {
+    margin: 0 !important;
+    padding: 3px 15px 8px 10px !important;
+    background: #eee !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
+    background: -moz-linear-gradient(-90deg, #fff, #eee) !important;
+    border-bottom: solid 1px #ddd !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+#lleo_dialog .lleo_has_context #lleo_contextContainer {
+    display: block !important;
+}
+#lleo_dialog #lleo_context {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    line-height: 12px !important;
+    font-size: 11px !important;
+    margin-left: 2px !important;
+}
+#lleo_dialog #lleo_context b {
+    line-height: 12px !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+}
+/*#lleo_dialog #lleo_gBrand {
+    color: #aaa !important;
+    font-size: 10px !important;
+    *//*padding-right: 52px !important;*//*
+    padding-bottom: 14px !important;
+    margin: -3px 4px 0 4px !important;
+    background: left bottom url(data:image/png;base64,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) no-repeat !important;
+    display: inline-block !important;
+    float: right !important;
+}
+#lleo_dialog #lleo_gBrand.hidden {
+    display: none !important;
+}*/
+#lleo_dialog #lleo_translateContextLink {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
+    background: -moz-linear-gradient(-90deg, #f4f4f4, #ddd) !important;
+    border: solid 1px !important;
+    box-shadow: 1px 1px 0 #f6f6f6 !important;
+    border-color: #999 #aaa #aaa #999 !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    padding: 0 3px !important;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    margin: 1px 5px 0 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+}
+#lleo_dialog #lleo_translateContextLink:hover {
+    background: #f8f8f8 !important;
+}
+#lleo_dialog #lleo_translateContextLink.hidden {
+    visibility: hidden !important;
+}
+
+#lleo_dialog #lleo_setTransForm {
+    display: block !important;
+    margin-top: 3px !important;
+    padding-top: 5px !important;
+    /* Set position and background because the form might be overlapped by an image when no translations */
+    position: relative !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    padding-bottom: 10px !important;
+    padding-left: 16px !important;
+}
+#lleo_dialog .lleo-custom-translation {
+    padding: 4px 5px !important;
+    border: solid 1px #ddd !important;
+	border-radius: 2px !important;
+    width: 90% !important;
+    min-width: 270px !important;
+    background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
+    background: -moz-linear-gradient(-90deg, #f1f1f1, #fff) !important;
+	font: normal 13px Arial, Helvetica !important;
+	line-height: 15px !important;
+}
+#lleo_dialog .lleo-custom-translation:hover {
+    border: solid 1px #aaa !important;
+}
+#lleo_dialog .lleo-custom-translation:focus {
+    background: #FFFEC9 !important;
+}
+
+#lleo_dialog *.hidden {
+    display: none !important;
+}
+
+#lleo_dialog .infinitive{
+    color: #D56E00 !important;
+    text-decoration: none;
+    border-bottom: 1px dotted #D56E00 !important;
+}
+#lleo_dialog .infinitive:hover{
+    border: none !important;
+}
+
+#lleo_dialog .lleo_separator {
+    height: 1px !important;
+    background: #eee;
+    margin-top: 10px !important;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, #eee 8%, rgba(255,255,255,1) 80%) !important;
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+}
+#lleo_dialog #lleo_trans {
+    /*border-top: 1px solid #eeeeee !important;*/
+    padding: 5px 30px 0 14px !important;
+    zoom: 1;
+}
+
+#lleo_dialog .lleo_clearfix {
+	display: block !important;
+	clear: both !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	font-size: 0 !important;
+}
+
+
+#lleo_dialog #lleo_picOuter table {
+    width: 44px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    vertical-align: middle !important;
+}
+
+#lleo_dialog #lleo_picOuter td {
+    width: 38px !important;
+    height: 38px !important;
+    /*border: 1px solid #eeeeee !important;*/
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+#lleo_dialog #lleo_picOuter td div {
+	height: 38px !important;
+	overflow: hidden !important;
+}
+
+#lleo_dialog .lleo_empty {
+    margin: 0 5px 7px !important;
+}
+
+#lleo_youtubeExportBtn {
+    margin-left: 10px;
+    height: 24px;
+}
+    #lleo_youtubeExportBtn i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: 0 0 url(https://d144fqpiyasmrr.cloudfront.net/plugins/all/images/i16.png) !important;
+    }
+    #lleo_youtubeExportBtn .yt-uix-button-content {
+        font-size: 12px;
+        line-height: 2px;
+    }
+
+
+/*** Parsed Lyrics Content *****************************/
+
+.lleo_lyrics tran {
+    background: transparent !important;
+    border-radius: 2px !important;
+    text-shadow: none !important;
+    cursor: pointer !important;
+}
+    .lleo_lyrics tran:hover {
+        color: #fff !important;
+        background: #C77213 !important;
+        -webkit-transition: all 0.1s !important;
+        -moz-transition: all 0.1s !important;
+        -ms-transition: all 0.1s !important;
+        -o-transition: all 0.1s !important;
+        transition: all 0.1s !important;
+    }
+
+.lleo_songName {
+    border: solid 1px #ffd47c;
+    background: #fff1c2;
+    border-radius: 2px;
+}
+
+.lleo_hidden_iframe {
+    visibility: hidden;
+}</style></head>
+<body style="zoom: 1;">
+<script type="text/javascript">
+	window.addEvent('domready', function() {			
+			var myMenu = new MenuMatic();
+	});	
+</script>
+	<div id="wrapper">
+<div id="wrapper-bg"><div id="wrapper-bg2">
+		<div id="outer-wrapper" class="outer-wrapper">  
+			<div class="outer">
+				<div class="menu-links">
+                    <div id="pagemenucontainer">
+					                        <ul id="pagemenu">
+    						<li><a href="http://www.resuldolaner.com/">Home</a></li>
+    						<li class="page_item page-item-2"><a href="http://www.resuldolaner.com/hakkimda/">Hakkımda</a></li>
+<li class="page_item page-item-214"><a href="http://www.resuldolaner.com/iletisim/">İletişim</a></li>
+    					</ul>
+                                            </div>
+				</div>
+                
+                <div class="twit-rss feedtwitter">
+					<a href="http://www.resuldolaner.com/feed/"><img src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/rss.png" style="margin:0 4px 0 0;"></a>		<a href="http://facebook.com/rrdolaner" title="Follow me on Facebook!"><img src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/facebook.png" style="margin:0 4px 0 0; " title="Follow me on Facebook!"></a>					<a href="http://twitter.com/RRDOLANER" title="Follow me on Twitter!"><img src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/twitter.png" style="margin:0 4px 0 0; " title="Follow me on Twitter!"></a>				</div>
+                
+				<div id="topsearch" class="span-7 rightsector">
+					 
+<div id="search">
+    <!--<h2 style="margin-bottom: 7px;" align="center">Site İçi Arama</h2>-->
+    <form method="get" id="searchform" action="http://www.resuldolaner.com/"> 
+        <input type="text" value="Search" name="s" id="s" onblur="if (this.value == &#39;&#39;)  {this.value = &#39;Search&#39;;}" onfocus="if (this.value == &#39;Search&#39;) {this.value = &#39;&#39;;}">
+        <input type="image" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/search.gif" style="border:0; vertical-align: top;"> 
+    </form>
+</div> 
+				</div>
+			</div>
+				<div id="header" class="outer">
+					<div class="header-part">
+													<a href="http://www.resuldolaner.com/"><img src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/logo1.png" alt="Resul Rıza DOLANER" title="Resul Rıza DOLANER" class="logoimg"></a>
+													
+					</div>
+					
+					<div class="header-part rightsector">
+                        <div style="padding: 0 0 0 0; text-align:right;">
+                        </div>
+					</div>
+				</div>
+			
+			<div class="outer">
+				<div id="navcontainer">
+					                            <ul id="nav">
+                                <li><a href="http://www.resuldolaner.com/">Home</a></li>
+        							<li class="cat-item cat-item-176"><a href="http://www.resuldolaner.com/category/android/">Android</a>
+</li>
+	<li class="cat-item cat-item-57"><a href="http://www.resuldolaner.com/category/arduino/">Arduino</a>
+</li>
+	<li class="cat-item cat-item-94"><a href="http://www.resuldolaner.com/category/etkinlikseminer/">Etkinlik &amp; Seminer</a>
+</li>
+	<li class="cat-item cat-item-32"><a href="http://www.resuldolaner.com/category/ornek-calismalar/">Örnek Çalışmalar</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="http://www.resuldolaner.com/category/sorunlar/">Sorunlar</a>
+</li>
+	<li class="cat-item cat-item-19"><a href="http://www.resuldolaner.com/category/yenilikler/">Yenilikler</a>
+</li>
+	<li class="cat-item cat-item-101"><a href="http://www.resuldolaner.com/category/yonetim-felsefesi/" title="İş yerlerindeki yönetimler hakkında kısa hikayelerden ve makalelerden oluşur.">Yönetim Felsefesi</a>
+</li>
+        					</ul>
+                            				</div>
+			</div>	<div class="outer" id="contentwrap">	
+			<div class="postcont">
+				<div id="content">	
+						
+												<div class="post-825 post type-post status-publish format-standard has-post-thumbnail hentry category-arduino tag-arduino-2 tag-arduino-ile-kapi-acip-kapama tag-arduino-ile-keypad-kullanimi tag-keypad tag-numeric tag-servo" id="post-825">
+							<h2 class="title">Arduino ile Keypad ve Kapı Şifresi Kontrolü</h2>
+							<div class="postdate"><img src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/date.png"> Temmuz 7th, 2017 <img src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/user.png"> Resul Rıza DOLANER </div>
+			
+							<div class="entry">
+<img width="70" height="48" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/Arduino_Logo.png" class="alignleft post_thumbnail wp-post-image" alt="">								<p>
+	Herkese Merhaba,
+</p>
+<p>
+	3 yıl aradan sonra tozlu raflardan ekipmanlarımı çıkardım ve kurcalarken sizler için bir uygulama yaptım. Daha önceden aldığım ama hiç kullanmadığım bir Keypad ile bina girişlerinde bulunan kapı kontrolünü arduino ile yaptım. Kapı olarak servo, açık ve kapalı olduğunu anlamak için kırmızo ve led kullanıldı. Burada kodlar arasında gerekli açıklamaları yaptım ve devrenin çalışma prensibinin videosunu alttaki linkten ulaşabilirsiniz.&nbsp;
+</p>
+<p><span id="more-825"></span></p>
+<p>
+	A tuşuna Kapı Aç, B tuşuna Kapıyı Kapat, # (Kare) tuşu ile şifre giriş başlangıcını belirttim. Burada parola olarak 1234 belirledim. # tuşuna basıldıktan sonra 1234 şifresi girildiği anda kapı açılır ve yeşil led 2 saniye boyunca yanar. Şifrenin yanlış olması durumunda kapı kitlenir ve 2 saniye boyunca kırmızı led yanar.
+</p>
+<p>
+	Burada 4×4 bir keypad kullandım, elinizde 3×4 de olabilir. o zaman numRows = 4 , numCols = 3 değişkenlerini ve&nbsp;keymap adındaki 2 boyutlu dizideki tuş dilimini düzenlemeniz gerekmektedir.
+</p>
+<p>
+	Keypad i şekildeki tuttuğunuzda soldan itibaren bacak bağlantılarını 2,3,4,5,6,7,8,9 nolu arduinonun girişlerine bağlamanız gerekmektedir.
+</p>
+<p>
+	10 numaralı arduino çıkışını servo motor kontrolü için, 11 ve 12 nolu çıkışları led kontrolü için kullanılmıştır.
+</p>
+<p>
+	Buradaki önemli noktalardan biri keypad kütüphanesinin Ardunio IDE sinin içerisinde olmamasıdır. Bunu dışardan kendimiz eklememiz gerekiyor. <a href="http://resuldolaner.com/ornek/Keypad.rar">Buradan </a>indirdiğimiz Keypad kütüphanesini çıkartın &nbsp;ve libraries klasörü içerisine atınız. Bu IDE nin kurulduğu yerde yer almaktadır. Bende c:\program files\arduino\libraries yolunun altında yer almaktaydı orayı kopyalayıp kullanmaya devam ettim.
+</p>
+<p>
+	Aşağıdaki devre şemasını ve kodları izleyerek rahatlıkla yapabilirsiniz.
+</p>
+<p>
+	İyi geliştirmeler <img draggable="false" class="emoji" alt="🙂" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/1f642.svg">
+</p>
+<p>
+	&nbsp;
+</p>
+<p>
+	<strong>Devre Şeması:</strong>
+</p>
+<p>
+	<a href="http://www.resuldolaner.com/arduino-ile-keypad-ve-kapi-sifresi-kontrolu/keypad-and-password-control-with-arduino_bb/" rel="attachment wp-att-827" style="" target="" title=""><img alt="" class="aligncenter size-large wp-image-827" height="446" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/keypad-and-password-control-with-arduino_bb-1024x557.png" style="" title="" width="819" srcset="http://www.resuldolaner.com/wp-content/uploads/keypad-and-password-control-with-arduino_bb-1024x557.png 1024w, http://www.resuldolaner.com/wp-content/uploads/keypad-and-password-control-with-arduino_bb-300x163.png 300w, http://www.resuldolaner.com/wp-content/uploads/keypad-and-password-control-with-arduino_bb-768x418.png 768w" sizes="(max-width: 819px) 100vw, 819px"></a>
+</p>
+<p>
+	&nbsp;
+</p>
+<p>
+	<strong>Arduino Kodları:</strong>
+</p>
+<p>
+	<br>
+	#include &lt;Keypad.h&gt; &nbsp;// <a href="http://resuldolaner.com/ornek/Keypad.rar">keypad kütüphanesi</a>, kendimiz import ediyoruz.<br>
+	#include &lt;Servo.h&gt; &nbsp; // servo kütüphanesi
+</p>
+<p>
+	int ledPinOpen=11; &nbsp; &nbsp; &nbsp;// yeşil led<br>
+	int ledPinClose=12; &nbsp; &nbsp; // kırmızı led<br>
+	const byte numRows= 4; &nbsp;// keypad satır sayısı<br>
+	const byte numCols= 4; &nbsp;// keypad sütün sayısı<br>
+	int control = 0;<br>
+	int counter = 0;<br>
+	String enter_password; &nbsp; &nbsp; // girilen şifreyi tutar<br>
+	String password = "#1234"; // kendimizin belirlediği şifre
+</p>
+<p>
+	Servo myservomotor;
+</p>
+<p>
+	// keypad tuş yapısını oluşturuyoruz<br>
+	char keymap[numRows][numCols]=&nbsp;<br>
+	{<br>
+	{'1', '2', '3', 'A'},&nbsp;<br>
+	{'4', '5', '6', 'B'},&nbsp;<br>
+	{'7', '8', '9', 'C'},<br>
+	{'*', '0', '#', 'D'}<br>
+	};
+</p>
+<p>
+	// bağlantı bacaklarını belirliyoruz<br>
+	byte rowPins[numRows] = {2,3,4,5};&nbsp;<br>
+	byte colPins[numCols]= {6,7,8,9};&nbsp;
+</p>
+<p>
+	// keypad i set ediyoruz<br>
+	Keypad myKeypad= Keypad(makeKeymap(keymap), rowPins, colPins, numRows, numCols);
+</p>
+<p>
+	void setup()<br>
+	{<br>
+	&nbsp; Serial.begin(9600);<br>
+	&nbsp; myservomotor.attach(10); &nbsp; &nbsp; &nbsp;// 10.bacak servo çıkışı<br>
+	&nbsp; myservomotor.write(0); &nbsp; &nbsp; &nbsp; &nbsp;// ilk etapta açısını 0 olarak set ediyoruz<br>
+	&nbsp; pinMode(ledPinOpen,OUTPUT); &nbsp; // led pinlerini çıkış olarak belitliyoruz<br>
+	&nbsp; pinMode(ledPinClose,OUTPUT); &nbsp;<br>
+	}
+</p>
+<p>
+	void loop()<br>
+	{<br>
+	&nbsp; char keypressed = myKeypad.getKey(); &nbsp;// keypadden gelen değer<br>
+	&nbsp; if (keypressed != NO_KEY) {<br>
+	&nbsp; &nbsp; Serial.print(keypressed);<br>
+	&nbsp; &nbsp; // # tuşuna basıldı ise control 1 olur password kontrole geçer<br>
+	&nbsp; &nbsp; if(keypressed == '#') { &nbsp;<br>
+	&nbsp; &nbsp; &nbsp; control = 1;<br>
+	&nbsp; &nbsp; }<br>
+	&nbsp; &nbsp; // Kapıyı Aç<br>
+	&nbsp; &nbsp; if(keypressed == 'A') {&nbsp;<br>
+	&nbsp; &nbsp; &nbsp; for(int value = 0; value &lt; 90; value++) {<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; myservomotor.write(value);<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; digitalWrite(ledPinOpen,1);&nbsp;<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; digitalWrite(ledPinClose,0);<br>
+	&nbsp; &nbsp; &nbsp; }<br>
+	&nbsp; &nbsp; }<br>
+	&nbsp; &nbsp; // Kapıyı Kapat<br>
+	&nbsp; &nbsp; if(keypressed == 'B') {<br>
+	&nbsp; &nbsp; &nbsp; for(int value = 90; value &gt; 1; value–){<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; myservomotor.write(value);<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; digitalWrite(ledPinOpen,0);&nbsp;<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; digitalWrite(ledPinClose,1);&nbsp;<br>
+	&nbsp; &nbsp; &nbsp; }<br>
+	&nbsp; &nbsp; }<br>
+	&nbsp; &nbsp; // # tuşuna basıldı ise gerekli kontrolleri yap<br>
+	&nbsp; &nbsp; if(control == 1){<br>
+	&nbsp; &nbsp; &nbsp; enter_password = enter_password + keypressed;<br>
+	&nbsp; &nbsp; &nbsp; counter++;<br>
+	&nbsp; &nbsp; &nbsp; Serial.print("sifre " + enter_password );<br>
+	&nbsp; &nbsp; &nbsp; // password doğru ise<br>
+	&nbsp; &nbsp; &nbsp; if(enter_password == password) {<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; Serial.print("kapı açıldı");<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; for(int value = 0; value &lt; 90; value++) {<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; myservomotor.write(value);<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; digitalWrite(ledPinOpen,1);&nbsp;<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; digitalWrite(ledPinClose,0);<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; delay(2000); &nbsp;// gecikme<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; digitalWrite(ledPinOpen,0);&nbsp;<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; enter_password = "";<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; control = 0;<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; counter = 0;<br>
+	&nbsp; &nbsp; &nbsp; }<br>
+	&nbsp; &nbsp; &nbsp; // password yanlış veya 4 den fazla girildi ise<br>
+	&nbsp; &nbsp; &nbsp; else if ((enter_password != password) &amp;&amp; (counter &gt; 4) ) {<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; Serial.print("hatalı giriş");<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; for(int value = 90; value &gt; 1; value–){<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; myservomotor.write(value);<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; digitalWrite(ledPinOpen,0);&nbsp;<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; digitalWrite(ledPinClose,1);<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; delay(2000);<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; digitalWrite(ledPinClose,0);<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; enter_password = "";<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; control = 0;<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; counter = 0;<br>
+	&nbsp; &nbsp; &nbsp; }<br>
+	&nbsp; &nbsp; }<br>
+	&nbsp; }<br>
+	}
+</p>
+<p>
+	<strong>Devre tasarım videosu:</strong>
+</p>
+<p>
+	<iframe width="500" height="281" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/0K2BgySZo3g.html" frameborder="0" allowfullscreen=""></iframe></p>
+															</div>
+							<div class="postmeta"><img src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/folder.png"> Posted in <a href="http://www.resuldolaner.com/category/arduino/" rel="category tag">Arduino</a>  <img src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/tag.png"> Tags: <a href="http://www.resuldolaner.com/tag/arduino-2/" rel="tag">arduino</a>, <a href="http://www.resuldolaner.com/tag/arduino-ile-kapi-acip-kapama/" rel="tag">arduino ile kapı açıp kapama</a>, <a href="http://www.resuldolaner.com/tag/arduino-ile-keypad-kullanimi/" rel="tag">arduino ile keypad kullanımı</a>, <a href="http://www.resuldolaner.com/tag/keypad/" rel="tag">keypad</a>, <a href="http://www.resuldolaner.com/tag/numeric/" rel="tag">numeric</a>, <a href="http://www.resuldolaner.com/tag/servo/" rel="tag">servo</a></div>
+						
+							<div class="navigation clearfix">
+								<div class="alignleft">« <a href="http://www.resuldolaner.com/xcode-error-itms-90475-invalid-bundle-ipad-multitasking-support-requires-launch-storyboard-in-bundle-hatasi/" rel="prev">Xcode:  ERROR ITMS-90475: “Invalid Bundle. iPad Multitasking support requires launch storyboard in bundle” Xcode Hatası</a></div>
+								<div class="alignright"><a href="http://www.resuldolaner.com/outlook-imza-bolumu-acilmama-sorunu/" rel="next">Outlook İmza Bölümü Açılmama Sorunu</a> »</div>
+							</div>
+							
+															You can <a href="http://www.resuldolaner.com/arduino-ile-keypad-ve-kapi-sifresi-kontrolu/#respond">leave a response</a>, or <a href="http://www.resuldolaner.com/arduino-ile-keypad-ve-kapi-sifresi-kontrolu/trackback/" rel="trackback">trackback</a> from your own site.
+	
+													</div><!--/post-825-->
+						
+				
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are open, but there are no comments. -->
+
+	 
+
+
+<div id="respond">
+
+<h3>Leave a Reply</h3>
+
+<div class="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.resuldolaner.com/arduino-ile-keypad-ve-kapi-sifresi-kontrolu/#respond" style="display:none;">Cevabı iptal etmek için tıklayın.</a></small>
+</div>
+
+<p>You must be <a href="http://www.resuldolaner.com/wp-login.php?redirect_to=http%3A%2F%2Fwww.resuldolaner.com%2Farduino-ile-keypad-ve-kapi-sifresi-kontrolu%2F">logged in</a> to post a comment.</p>
+</div>
+
+				
+							
+							</div>
+			</div>
+		<div class="sidecont rightsector">
+	
+    <div class="sidebar">
+        			<div class="addthis_toolbox">   
+    			    <div class="custom_images">
+    			            <a class="addthis_button_twitter at300b" title="Twitter" href="http://www.resuldolaner.com/arduino-ile-keypad-ve-kapi-sifresi-kontrolu/#"><img src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/twitter(1).png" width="32" height="32" alt="Twitter"></a>
+    			            <a class="addthis_button_facebook at300b" title="Facebook" href="http://www.resuldolaner.com/arduino-ile-keypad-ve-kapi-sifresi-kontrolu/#"><img src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/facebook(1).png" width="32" height="32" alt="Facebook"></a>
+    			            <a class="addthis_button_linkedin at300b" target="_blank" title="LinkedIn" href="http://www.resuldolaner.com/arduino-ile-keypad-ve-kapi-sifresi-kontrolu/#"><img src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/linkedin-circle.png" width="32" height="32" alt="Linkedin"></a>
+    			            <a class="addthis_button_favorites at300b" title="Favoriler" href="http://www.resuldolaner.com/arduino-ile-keypad-ve-kapi-sifresi-kontrolu/#"><img src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/favorites.png" width="32" height="32" alt="Favorites"></a>
+    			            <a class="addthis_button_more at300b" target="_blank" title="Diğer" href="http://www.resuldolaner.com/arduino-ile-keypad-ve-kapi-sifresi-kontrolu/#"><img src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/more.png" width="32" height="32" alt="More"></a>
+    			    </div>
+    			    <script type="text/javascript" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/addthis_widget.js.indir"></script>
+    			<div class="atclear"></div></div>	
+        
+        		<div class="sidebarvideo">
+    			
+		   <ul> 
+                       <li>
+			 <h2 style="margin-bottom: 7px;" align="center">Arduino Videoları</h2>
+    			  <iframe width="269" height="240" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/4m6gomFTj3k.html" frameborder="0" allowfullscreen=""></iframe><br><a href="https://www.youtube.com/watch?v=4m6gomFTj3k" target="_blank">Arduino ile Android Uygulamadan Bluetooth...</a> <i>paylaşan: <a href="http://www.youtube.com/rrdolaner" target="_blank">Resul Rıza Dolaner</a></i>
+    		       </li>
+ 		       <li>
+			 <h2 style="margin-bottom: 7px;" align="center">Makaleler</h2>
+    			  <iframe src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/AXIIpZbhHCcRbR.html" width="269" height="240" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe> <div style="margin-bottom:5px"> <strong> <a href="http://www.slideshare.net/rrdolaner/arduinonun-kablosuz-haberleme-teknolojsnde-kulllanimi-ve-mn-akilli-ev-uygulamasi" title="Arduino&#39;nun kablosuz haberleşme teknolojisinde kullanılması ve Mini Akıllı Ev Uygulaması" target="_blank">Arduino'nun kablosuz haberleşme teknolojisinde kullanılması ve Mini Akıllı Ev Uygulaması</a> </strong> from <strong><a target="_blank" href="https://www.slideshare.net/rrdolaner">Resul Rıza Dolaner</a></strong> </div>
+    		       </li>
+		       <li>
+			 <h2 style="margin-bottom: 7px;" align="center">Twitter</h2>
+    			   <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" style="position: static; visibility: visible; display: inline-block; width: 520px; height: 400px; padding: 0px; border: none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px; min-height: 200px;" data-widget-id="691875754326507521" title="Twitter Zaman Akışı" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/saved_resource.html"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    		       </li>
+    		   </ul>
+    		</div>
+    			<ul>
+			<li id="search-2" class="widget widget_search"> 
+<div id="search">
+    <!--<h2 style="margin-bottom: 7px;" align="center">Site İçi Arama</h2>-->
+    <form method="get" id="searchform" action="http://www.resuldolaner.com/"> 
+        <input type="text" value="Search" name="s" id="s" onblur="if (this.value == &#39;&#39;)  {this.value = &#39;Search&#39;;}" onfocus="if (this.value == &#39;Search&#39;) {this.value = &#39;&#39;;}">
+        <input type="image" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/search.gif" style="border:0; vertical-align: top;"> 
+    </form>
+</div></li>		<li id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widgettitle">Son Yazılar</h2>		<ul>
+											<li>
+					<a href="http://www.resuldolaner.com/outlook-imza-bolumu-acilmama-sorunu/">Outlook İmza Bölümü Açılmama Sorunu</a>
+									</li>
+											<li>
+					<a href="http://www.resuldolaner.com/arduino-ile-keypad-ve-kapi-sifresi-kontrolu/">Arduino ile Keypad ve Kapı Şifresi Kontrolü</a>
+									</li>
+											<li>
+					<a href="http://www.resuldolaner.com/xcode-error-itms-90475-invalid-bundle-ipad-multitasking-support-requires-launch-storyboard-in-bundle-hatasi/">Xcode:  ERROR ITMS-90475: “Invalid Bundle. iPad Multitasking support requires launch storyboard in bundle” Xcode Hatası</a>
+									</li>
+											<li>
+					<a href="http://www.resuldolaner.com/android-studio-turkce-karakter-sorunu-unmappable-character-for-encoding-utf-8/">Android Studio Türkçe Karakter Sorunu: unmappable character for encoding UTF-8</a>
+									</li>
+											<li>
+					<a href="http://www.resuldolaner.com/android-studio-da-sha-1-anahtarini-bulma/">Android Studio da SHA 1 anahtarını bulma</a>
+									</li>
+					</ul>
+		</li><li id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widgettitle">Son Yorumlar</h2><ul id="recentcomments"><li class="recentcomments"><a href="http://www.resuldolaner.com/iphonenun-hayal-kirikligi/#comment-8">iPhone’nun Hayal Kırıklığı</a> için <span class="comment-author-link">rrdolaner</span></li><li class="recentcomments"><a href="http://www.resuldolaner.com/merhaba-dunya/#comment-6">Merhabalar Herkese…</a> için <span class="comment-author-link">rrdolaner</span></li><li class="recentcomments"><a href="http://www.resuldolaner.com/googledan-ilk-tableti-nexus-7/#comment-5">Google’dan ilk Tableti “Nexus 7”</a> için <span class="comment-author-link">rrdolaner</span></li><li class="recentcomments"><a href="http://www.resuldolaner.com/googledan-ilk-tableti-nexus-7/#comment-4">Google’dan ilk Tableti “Nexus 7”</a> için <span class="comment-author-link"><a href="http://www.yunusemrekaplan.com/" rel="external nofollow" class="url">Yunus Emre</a></span></li></ul></li><li id="archives-2" class="widget widget_archive"><h2 class="widgettitle">Arşivler</h2>		<ul>
+			<li><a href="http://www.resuldolaner.com/2018/06/">Haziran 2018</a></li>
+	<li><a href="http://www.resuldolaner.com/2017/07/">Temmuz 2017</a></li>
+	<li><a href="http://www.resuldolaner.com/2017/06/">Haziran 2017</a></li>
+	<li><a href="http://www.resuldolaner.com/2017/05/">Mayıs 2017</a></li>
+	<li><a href="http://www.resuldolaner.com/2017/04/">Nisan 2017</a></li>
+	<li><a href="http://www.resuldolaner.com/2016/10/">Ekim 2016</a></li>
+	<li><a href="http://www.resuldolaner.com/2016/08/">Ağustos 2016</a></li>
+	<li><a href="http://www.resuldolaner.com/2016/05/">Mayıs 2016</a></li>
+	<li><a href="http://www.resuldolaner.com/2016/03/">Mart 2016</a></li>
+	<li><a href="http://www.resuldolaner.com/2016/02/">Şubat 2016</a></li>
+	<li><a href="http://www.resuldolaner.com/2015/10/">Ekim 2015</a></li>
+	<li><a href="http://www.resuldolaner.com/2015/08/">Ağustos 2015</a></li>
+	<li><a href="http://www.resuldolaner.com/2015/07/">Temmuz 2015</a></li>
+	<li><a href="http://www.resuldolaner.com/2015/06/">Haziran 2015</a></li>
+	<li><a href="http://www.resuldolaner.com/2014/11/">Kasım 2014</a></li>
+	<li><a href="http://www.resuldolaner.com/2014/09/">Eylül 2014</a></li>
+	<li><a href="http://www.resuldolaner.com/2014/08/">Ağustos 2014</a></li>
+	<li><a href="http://www.resuldolaner.com/2014/06/">Haziran 2014</a></li>
+	<li><a href="http://www.resuldolaner.com/2014/05/">Mayıs 2014</a></li>
+	<li><a href="http://www.resuldolaner.com/2014/04/">Nisan 2014</a></li>
+	<li><a href="http://www.resuldolaner.com/2013/12/">Aralık 2013</a></li>
+	<li><a href="http://www.resuldolaner.com/2013/09/">Eylül 2013</a></li>
+	<li><a href="http://www.resuldolaner.com/2013/07/">Temmuz 2013</a></li>
+	<li><a href="http://www.resuldolaner.com/2013/05/">Mayıs 2013</a></li>
+	<li><a href="http://www.resuldolaner.com/2013/04/">Nisan 2013</a></li>
+	<li><a href="http://www.resuldolaner.com/2013/01/">Ocak 2013</a></li>
+	<li><a href="http://www.resuldolaner.com/2012/09/">Eylül 2012</a></li>
+	<li><a href="http://www.resuldolaner.com/2012/08/">Ağustos 2012</a></li>
+	<li><a href="http://www.resuldolaner.com/2012/06/">Haziran 2012</a></li>
+	<li><a href="http://www.resuldolaner.com/2012/05/">Mayıs 2012</a></li>
+		</ul>
+		</li><li id="categories-2" class="widget widget_categories"><h2 class="widgettitle">Kategoriler</h2>		<ul>
+	<li class="cat-item cat-item-1"><a href="http://www.resuldolaner.com/category/anasayfa/">Anasayfa</a>
+</li>
+	<li class="cat-item cat-item-176"><a href="http://www.resuldolaner.com/category/android/">Android</a>
+</li>
+	<li class="cat-item cat-item-57"><a href="http://www.resuldolaner.com/category/arduino/">Arduino</a>
+</li>
+	<li class="cat-item cat-item-94"><a href="http://www.resuldolaner.com/category/etkinlikseminer/">Etkinlik &amp; Seminer</a>
+</li>
+	<li class="cat-item cat-item-32"><a href="http://www.resuldolaner.com/category/ornek-calismalar/">Örnek Çalışmalar</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="http://www.resuldolaner.com/category/sorunlar/">Sorunlar</a>
+</li>
+	<li class="cat-item cat-item-19"><a href="http://www.resuldolaner.com/category/yenilikler/">Yenilikler</a>
+</li>
+	<li class="cat-item cat-item-101"><a href="http://www.resuldolaner.com/category/yonetim-felsefesi/" title="İş yerlerindeki yönetimler hakkında kısa hikayelerden ve makalelerden oluşur.">Yönetim Felsefesi</a>
+</li>
+		</ul>
+</li><li id="meta-3" class="widget widget_meta"><h2 class="widgettitle">Meta</h2>			<ul>
+						<li><a href="http://www.resuldolaner.com/wp-login.php">Giriş</a></li>
+			<li><a href="http://www.resuldolaner.com/feed/">Yazılar <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.resuldolaner.com/comments/feed/">Yorumlar <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="WordPress’in desteğiyle, kişisel yayım ortamı.">WordPress.org</a></li>			</ul>
+			</li><li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Sayfalar</h2>		<ul>
+			<li class="page_item page-item-2"><a href="http://www.resuldolaner.com/hakkimda/">Hakkımda</a></li>
+<li class="page_item page-item-214"><a href="http://www.resuldolaner.com/iletisim/">İletişim</a></li>
+		</ul>
+		</li>		</ul>
+
+			</div>
+</div>	</div>
+    <div class="outer">
+	<div id="footer"><a><b>Resul Rıza DOLANER 2012-2016 ©</b></a></div>
+             <!--<div id="info" style="visibility:hidden"><a href="http://www.yurtdisi-egitim.org/rusya-dil-okullari.htm">rusya dil okulları</a><a href="http://vizebasvuru.com/pasaport-bilgileri.htm">vize başvuru</a><a href="http://amerikadaegitim.org/amerikada-universite-egitimi.htm">amerikada eğitim</a><a href="http://ingiltere-vizesi.com/">ingiltere vizesi</a><a href="http://amerikadaegitim.org/amerikada-universite-egitimi.htm">amerikada üniversite</a><a href="http://danimarkaailebirlesimi.com/index.php">danimarka aile birleşimi</a>
+<a href="http://maltaya.com/malta-hakkinda.htm">maltada eğitim</a><a href="http://londradilokullari.com/vize-islemleri.htm">ingiltere dil okulları</a><a href="http://eduuk.org/ingiltere-dil-okullari/">ingiltere dil okulları</a>
+    </div>-->
+</div>
+</div>
+</div></div></div><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;"><iframe id="_atssh634" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px; left: 0px;" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/sh.e4e8af4de595fdb10ec1459d.html"></iframe></div><style id="service-icons-0"></style>
+
+
+
+
+<div id="subMenusContainer"></div><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/widget_iframe.bed9e19e565ca3b578705de9e73c29ed.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Arduino ile Keypad ve Kapı Şifresi Kontrolü _ Resul Rıza DOLANER_files/saved_resource(1).html"></iframe><div id="SL_balloon_obj" alt="0" style="display: block;"><div id="SL_button" class="SL_ImTranslatorLogo" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/imtranslator-s.png&quot;); opacity: 0; display: none; left: 631px; top: 3124px; transition: visibility 2s, opacity 2s linear;"></div><div id="SL_shadow_translation_result2" style="display: none;"></div><div id="SL_shadow_translator" style="display: none;"><div id="SL_planshet"><div id="SL_arrow_up" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/up.png&quot;);"></div><div id="SL_Bproviders"><div class="SL_BL_LABLE_ON" title="Google" id="SL_P0">G</div><div class="SL_BL_LABLE_ON" title="Microsoft" id="SL_P1">M</div><div class="SL_BL_LABLE_ON" title="Translator" id="SL_P2">T</div></div><div id="SL_alert_bbl" style="display: none;"><div id="SLHKclose" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/delete.png&quot;);"></div><div id="SL_alert_cont"></div></div><div id="SL_TB"><table id="SL_tables" cellspacing="1"><tr><td class="SL_td" width="10%" align="right"><input id="SL_locer" type="checkbox" title="Dili kilitle"></td><td class="SL_td" width="20%" align="left"><select id="SL_lng_from" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/select.png&quot;) 100% 0px no-repeat rgb(255, 255, 255);"><option value="auto">Dili algıla</option><option value="af">Afrika Dili</option><option value="de">Almanca</option><option value="ar">Arapça</option><option value="sq">Arnavutça</option><option value="az">Azerice</option><option value="eu">Baskça</option><option value="be">Belarusça</option><option value="bn">Bengalce</option><option value="bs">Boşnakça</option><option value="bg">Bulgarca</option><option value="my">Burmaca</option><option value="jw">Cava Dili</option><option value="ceb">Cebuano</option><option value="cs">Çekçe</option><option value="ny">Chicheva</option><option value="zh-CN">Çince Basit</option><option value="zh-TW">Çince Eski</option><option value="da">Danca</option><option value="id">Endonezya Dili</option><option value="hy">Ermenice</option><option value="eo">Esperantoca</option><option value="et">Estonyaca</option><option value="fa">Farsça</option><option value="nl">Felemenkçe</option><option value="tl">Filipince</option><option value="fi">Fince</option><option value="fr">Fransızca</option><option value="fy">Frizon Dili</option><option value="cy">Galce</option><option value="gl">Galiçyaca</option><option value="gu">Gücerat Dili</option><option value="ka">Gürcüce</option><option value="am">Habeşçe</option><option value="ht">Haiti Creole Dili</option><option value="ha">Hausa Dili</option><option value="haw">Havai Dili</option><option value="hi">Hintçe</option><option value="hr">Hırvatça</option><option value="hmn">Hmong Dili</option><option value="xh">Hosa</option><option value="iw">İbranice</option><option value="ig">İgbo Dili</option><option value="en">İngilizce</option><option value="ga">İrlandaca</option><option value="es">İspanyolca</option><option value="sv">İsveçce</option><option value="it">İtalyanca</option><option value="is">İzlandaca</option><option value="ja">Japonca</option><option value="km">Kamboçyaca</option><option value="kn">Kannada</option><option value="ca">Katalanca</option><option value="kk">Kazakça</option><option value="ky">Kırgızca</option><option value="ko">Korece</option><option value="co">Korsika Dili</option><option value="ku">Kürtçe</option><option value="gd">Kuzey İskoç Dili</option><option value="lo">Laoca</option><option value="la">Latince</option><option value="pl">Lehçe</option><option value="lv">Letonca</option><option value="lt">Litvanyaca</option><option value="lb">Lüksemburgca</option><option value="hu">Macarca</option><option value="mg">Madagaskar Dili</option><option value="mk">Makedonca</option><option value="ml">Malayalam</option><option value="ms">Malezya Dili</option><option value="mt">Malta Dili</option><option value="mi">Maori Dili</option><option value="mr">Marathi</option><option value="mn">Moğolca</option><option value="ne">Nepalce</option><option value="no">Norveççe</option><option value="uz">Özbekçe</option><option value="pa">Pencap Dili</option><option value="ps">Peştuca</option><option value="pt">Portekizce</option><option value="ro">Rumence</option><option value="ru">Rusça</option><option value="sm">Samoaca</option><option value="st">Sesotho Dili</option><option value="si">Seylanca</option><option value="sn">Shona</option><option value="sd">Sint</option><option value="sr">Sırpça</option><option value="sk">Slovakça</option><option value="sl">Slovence</option><option value="so">Somalice</option><option value="su">Sundanizce</option><option value="sw">Svahili Dili</option><option value="tg">Tacikce</option><option value="ta">Tamil</option><option value="th">Tay dili</option><option value="te">Telugu Dili</option><option value="tr">Türkçe</option><option value="uk">Ukraynaca</option><option value="ur">Urduca</option><option value="vi">Vietnamca</option><option value="yi">Yidce</option><option value="yo">Yoruba</option><option value="el">Yunanca</option><option value="zu">Zulu</option></select></td><td class="SL_td" width="3" align="center"><div id="SL_switch_b" title="Dilleri değiştir" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/switchb.png&quot;);"></div></td><td class="SL_td" width="20%" align="left"><select id="SL_lng_to" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/select.png&quot;) 100% 0px no-repeat rgb(255, 255, 255);"><option value="af">Afrika Dili</option><option value="de">Almanca</option><option value="ar">Arapça</option><option value="sq">Arnavutça</option><option value="az">Azerice</option><option value="eu">Baskça</option><option value="be">Belarusça</option><option value="bn">Bengalce</option><option value="bs">Boşnakça</option><option value="bg">Bulgarca</option><option value="my">Burmaca</option><option value="jw">Cava Dili</option><option value="ceb">Cebuano</option><option value="cs">Çekçe</option><option value="ny">Chicheva</option><option value="zh-CN">Çince Basit</option><option value="zh-TW">Çince Eski</option><option value="da">Danca</option><option value="id">Endonezya Dili</option><option value="hy">Ermenice</option><option value="eo">Esperantoca</option><option value="et">Estonyaca</option><option value="fa">Farsça</option><option value="nl">Felemenkçe</option><option value="tl">Filipince</option><option value="fi">Fince</option><option value="fr">Fransızca</option><option value="fy">Frizon Dili</option><option value="cy">Galce</option><option value="gl">Galiçyaca</option><option value="gu">Gücerat Dili</option><option value="ka">Gürcüce</option><option value="am">Habeşçe</option><option value="ht">Haiti Creole Dili</option><option value="ha">Hausa Dili</option><option value="haw">Havai Dili</option><option value="hi">Hintçe</option><option value="hr">Hırvatça</option><option value="hmn">Hmong Dili</option><option value="xh">Hosa</option><option value="iw">İbranice</option><option value="ig">İgbo Dili</option><option value="en">İngilizce</option><option value="ga">İrlandaca</option><option value="es">İspanyolca</option><option value="sv">İsveçce</option><option value="it">İtalyanca</option><option value="is">İzlandaca</option><option value="ja">Japonca</option><option value="km">Kamboçyaca</option><option value="kn">Kannada</option><option value="ca">Katalanca</option><option value="kk">Kazakça</option><option value="ky">Kırgızca</option><option value="ko">Korece</option><option value="co">Korsika Dili</option><option value="ku">Kürtçe</option><option value="gd">Kuzey İskoç Dili</option><option value="lo">Laoca</option><option value="la">Latince</option><option value="pl">Lehçe</option><option value="lv">Letonca</option><option value="lt">Litvanyaca</option><option value="lb">Lüksemburgca</option><option value="hu">Macarca</option><option value="mg">Madagaskar Dili</option><option value="mk">Makedonca</option><option value="ml">Malayalam</option><option value="ms">Malezya Dili</option><option value="mt">Malta Dili</option><option value="mi">Maori Dili</option><option value="mr">Marathi</option><option value="mn">Moğolca</option><option value="ne">Nepalce</option><option value="no">Norveççe</option><option value="uz">Özbekçe</option><option value="pa">Pencap Dili</option><option value="ps">Peştuca</option><option value="pt">Portekizce</option><option value="ro">Rumence</option><option value="ru">Rusça</option><option value="sm">Samoaca</option><option value="st">Sesotho Dili</option><option value="si">Seylanca</option><option value="sn">Shona</option><option value="sd">Sint</option><option value="sr">Sırpça</option><option value="sk">Slovakça</option><option value="sl">Slovence</option><option value="so">Somalice</option><option value="su">Sundanizce</option><option value="sw">Svahili Dili</option><option value="tg">Tacikce</option><option value="ta">Tamil</option><option value="th">Tay dili</option><option value="te">Telugu Dili</option><option selected="selected" value="tr">Türkçe</option><option value="uk">Ukraynaca</option><option value="ur">Urduca</option><option value="vi">Vietnamca</option><option value="yi">Yidce</option><option value="yo">Yoruba</option><option value="el">Yunanca</option><option value="zu">Zulu</option></select></td><td class="SL_td" width="5%" align="center"> </td><td class="SL_td" width="8%" align="center"><div id="SL_TTS_voice" title="undefined" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/ttsvoice.png&quot;);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_copy" title="Çeviriyi kopyala" class="SL_copy" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/copy.png&quot;);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_bbl_font_patch"></div><div id="SL_bbl_font" title="Yazı tipi boyutu" class="SL_bbl_font" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/font.png&quot;);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_bbl_help" title="Yardım" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bhelp.png&quot;);"></div></td><td class="SL_td" width="15%" align="right"><div id="SL_pin" class="SL_pin_off" title="Açılır pencereyi sabitle" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/pin-on.png&quot;);"></div></td></tr></table></div></div><div id="SL_shadow_translation_result" style="visibility: visible;"></div><div id="SL_loading" class="SL_loading" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/loading.gif&quot;);"></div><div id="SL_player2"></div><div id="SL_alert100">Konuşma fonksiyonu 200 karakter ile sınırlıdır</div><div id="SL_Balloon_options" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bg3.png&quot;) rgb(255, 255, 255);"><div id="SL_arrow_down" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/down.png&quot;);"></div><table id="SL_tbl_opt" width="100%"><tr><td width="5%" align="center"><input id="SL_BBL_locer" type="checkbox" checked="1" title="Tercüman tuşunu göster 3 saniye"></td><td width="5%" align="left"><div id="SL_BBL_IMG" title="Tercüman tuşunu göster 3 saniye" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bbl-logo.png&quot;);"></div></td><td width="70%" align="center"><a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/options.html?bbl" target="_blank" class="SL_options" title="Seçenekleri göster">Seçenekler</a> : <a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/options.html?hist" target="_blank" class="SL_options" title="Tercüme geçmişi">Geçmiş</a> : <a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/options.html?feed" target="_blank" class="SL_options" title="Geribildirim">Geribildirim</a> : <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GD9D8CPW8HFA2" target="_blank" class="SL_options" title="Küçük bir katkıda bulun">Donate</a></td><td width="15%" align="right"><span id="SL_Balloon_Close" title="Kapat">Kapat</span></td></tr></table></div></div></div></body></html>

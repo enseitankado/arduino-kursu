@@ -1,0 +1,27 @@
+iBeacon mod ayarlari
+
+
+AT+RENEW
+AT+RESET
+AT+ADVIF
+AT+ADTY3
+AT+IBEA1
+AT+DELO2
+AT+PWRM0
+AT+RESET
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

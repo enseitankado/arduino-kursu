@@ -1,0 +1,21 @@
+İŞLEM BASAMAKLARI
+-----------------
+
+
+1-Taslak->library ekle->.Zip Kitaplığı ekle seçeneklerinde "NewliquidCrystal.zip" kütüphane arşivi dosyası yüklenir.
+
+2- Taslak->library ekle alt menüsünde "NewliquidCrystal"  ve "Wire" yüklenip yüklenmediği kontrol edilir.
+
+(Ayrıca Dosya->Tercihler menü seçeneğinde yer alan "Taslak defteri" konumundaki libraries dizininden de kontrol edilebilir)
+
+3-Yenibir taslağa ya da mevcut boş taslağa aşağıdaki include'lar eklenir:
+
+#include <Wire.h> 
+#include <LiquidCrystal_I2C.h>
+
+4-I2C LCD dönüştürücüsü ile Arduino aşağıdaki gibi bağlanır:
+
+	GND -> (-) (Arduino GND)
+	VCC -> (+) (Arduino 5V)
+	SDA -> Data (Arduino A4)
+	SCL -> Clock (Arduino A5)

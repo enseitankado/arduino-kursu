@@ -1,0 +1,37 @@
+// ------------------------------------------------------------------------------
+// DONANIM NOTLARI
+// ------------------------------------------------------------------------------
+
+RF kart okuyucunun üzerindeki çipin adı MFRC522 (Mifare), NXP (Philips) üretimi:
+
+* MIFARE (MIFARE Mini, MIFARE 1K, MIFARE 4K, MIFARE Ultralight, MIFARE DESFire EV1 and MIFARE Plus) olarak anılan kartların telefin Philips'e aittir ve içerisinde bellekli bir mikroçip bulundurur. 
+
+* Antene bağlı olarak 50mm'ye kadar okuyabilir. 
+
+* Okuma/yazma sırasında MF1xxS20, MF1xxS70 ve MF1xxS50 şifrelemelerini destekler.
+
+* Arabirimleri: 
+	- SPI up to 10 Mbit/s
+	- I2C-bus  up to 400 kBd in Fast mode, up to 3400 kBd in High-speed mode
+	- RS232 Serial UART up to 1228.8 kBd, with voltage levels dependant on pin voltage supply
+	
+* FIFO buffer handles 64 byte send and receive
+
+* Internal oscillator for connection to 27.12 MHz quartz crystal
+
+* 2.5 V to 3.3 V power supply
+
+* Programmable I/O pins
+
+* Internal self-test	
+
+
+// ------------------------------------------------------------------------------
+// PROGRAMALAMA NOTLARI
+// ------------------------------------------------------------------------------
+
+
+UID = Unique ID
+PICC = Proximity Integrated Circuit Card (RFID Tag itself) 
+
+MIFARE 1KB has 4 bytes-long UIDs.

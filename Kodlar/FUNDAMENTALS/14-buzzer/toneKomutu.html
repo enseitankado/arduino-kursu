@@ -1,0 +1,1299 @@
+
+<!-- saved from url=(0072)https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="./toneKomutu_files/newsletter-modal.css"><link rel="stylesheet" href="./toneKomutu_files/footer.css"><link rel="stylesheet" href="./toneKomutu_files/header.css">
+    <link rel="stylesheet" href="./toneKomutu_files/style.css" type="text/css">
+
+<link rel="icon" href="https://www.arduino.cc/reference/favicon.ico">
+
+<meta name="description" content="The Arduino programming language Reference, organized into Functions, Variable and Constant, and Structure keywords.">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+
+
+<title>Arduino Reference</title>
+<script async="" src="./toneKomutu_files/analytics.js.indir"></script><script src="./toneKomutu_files/jquery-3.3.1.min.js.indir"></script><style type="text/css">/*.lleo_errorSelection *::-moz-selection,
+.lleo_errorSelection *::selection,
+.lleo_errorSelection *::-webkit-selection {
+    background-color: red !important;
+    color: #fff !important;;
+}*/
+
+#lleo_dialog,
+#lleo_dialog * {
+    color: #000 !important;
+    font: normal 13px Arial, Helvetica !important;
+    line-height: 15px !important;
+    margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none 0 !important;
+	position: static !important;
+	vertical-align: baseline !important;
+	overflow: visible !important;
+	width: auto !important;
+	height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+	float: none !important;
+	visibility: visible !important;
+	text-align: left !important;
+    text-transform: none !important;
+	border-collapse: separate !important;
+	border-spacing: 2px !important;
+    box-sizing: content-box !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    filter: none !important;
+}
+#lleo_dialog *:before,
+#lleo_dialog *:after {
+    content: '';
+}
+
+#lleo_dialog iframe {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+#lleo_dialog {
+    position: absolute !important;
+    background: #fff !important;
+    border: solid 1px #ccc !important;
+    padding: 7px 0 0 !important;
+    left: -999px;
+    top: -999px;
+    width: 440px !important;
+    overflow: hidden;
+    display: block !important;
+    z-index: 999999999 !important;
+    box-shadow: 8px 16px 30px rgba(0, 0, 0, 0.16) !important;
+    border-radius: 3px !important;
+    opacity: 0 !important;
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    transform: translateY(15px);
+}
+#lleo_dialog.lleo_show_small {
+    width: 150px !important;
+}
+#lleo_dialog.lleo_show {
+    opacity: 1 !important;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s !important;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s !important;
+    -ms-transition: -ms-transform 0.3s, opacity 0.3s !important;
+    -o-transition: -o-transform 0.3s, opacity 0.3s !important;
+    transition: transform 0.3s, opacity 0.3s !important;
+}
+#lleo_dialog.lleo_collapse {
+    opacity: 0 !important;
+    -webkit-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -moz-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -ms-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -o-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s !important;
+    -ms-transition: -ms-transform 0.4s, opacity 0.4s !important;
+    -o-transition: -o-transform 0.4s, opacity 0.4s !important;
+    transition: transform 0.4s, opacity 0.4s !important;
+}
+#lleo_dialog input::-webkit-input-placeholder {
+    color: #aaa !important;
+}
+#lleo_dialog .lleo_has_pic #lleo_word {
+	margin-right: 80px !important;
+}
+#lleo_dialog #lleo_translationsContainer1 {
+	position: relative !important;
+}
+#lleo_dialog #lleo_translationsContainer2 {
+	padding: 7px 0 0 !important;
+	vertical-align: middle !important;
+}
+#lleo_dialog #lleo_word {
+    color: #000 !important;
+    margin: 0 5px 2px 0 !important;
+    /*float: left !important;*/
+}
+#lleo_dialog .lleo_has_sound #lleo_word {
+    margin-left: 30px !important;
+}
+#lleo_dialog #lleo_text {
+    font-weight: bold !important;
+    color: #d56e00 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+/*
+#lleo_dialog #lleo_text.lleo_known {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+*/
+/*#lleo_dialog #lleo_closeBtn {
+    position: absolute !important;
+    right: 6px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 0 !important;
+    color: #aaa !important;
+    display: block !important;
+	z-index: 9999999999 !important;
+	width: 7px !important;
+	height: 7px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}*/
+
+#lleo_dialog #lleo_optionsBtn {
+    position: absolute !important; 
+    right: 3px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    color: #aaa !important;
+    padding: 2px !important;
+	display: none;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_optionsBtn {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_optionsBtn img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+#lleo_dialog #lleo_sound {
+    float: left !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 9px !important;
+    margin-right: 3px !important;
+    background: 0 0 no-repeat !important;
+    cursor: pointer !important;
+    display: none !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfNJREFUeNq0U01IVFEU/u57Oo5WhBRIBBptykWLYBa2soWiEKQQEbrSFsGbVRQKQc2iFqGitXqvjQxCoCJCqyI0aBUtZILaJNUuYWYWo8HovJ/707nP94bnz0rxwvfOuefd8517fi5TSuE4i50YwZ3l37ZhNlpgzFkaaM/G9sHF1YskNrT+7l4PjMOcb78t2JL71uxgB+2UlfxHTtq5N94fIOh/88kWgWfl73ZCSQkpeGg3H091JY6dI2S00qA/N3KO3dDUYhFgEmZGurG+w9FqApIHsVM7kaTF9Nhn0r8Q7hPWQgIRuNaH3AMUA4W/Lkdh04cpFS43G0TgxQTvCdMETVAk3KynIHwXZU/ge8XDt7KH9bKLjU0P2zVO5LsEpSejVRJ9UR18EtfqKegovs9R3Q6w9c/H1o4Aa2Jwm1lIvn9RJ4w9RdRRzqcYrpwycCll4Cy1lnkS3Bc6vfBg28v8aRIfI78zhB/1GygROH3jLyyzMQ0zlUZuZBSlKkeLoegGtTjYLcJ8pF+NakHOFC2J6w+f25mxSfWrWFF/ShXVPTGvtN14NNkVnxlYWJkgZEL7/vwKr55lKSVnaGYWkuYgrgG172uUv47+U7fw0EHaJXmalUQy/HqO6lBzEsVjJC4Q8kd6TETQpjuaGOvjv8b/AgwA/ij1XMx58NIAAAAASUVORK5CYII=) !important;
+}
+#lleo_dialog .lleo_has_sound #lleo_sound {
+    display: block !important;
+}
+
+#lleo_dialog #lleo_soundWave {
+    border: solid 5px #4495CC !important;
+    border-radius: 5px !important;
+    position: absolute !important;
+    left: -5px !important;
+    top: -5px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    z-index: 0 !important;
+    opacity: 0.9 !important;
+    display: none !important;
+}
+    #lleo_dialog #lleo_soundWave.lleo_beforePlaying {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_soundWave.lleo_playing {
+        opacity: 0 !important;
+        border-width: 20px !important;
+        border-radius: 30px !important;
+
+        -webkit-transform: scale(1.07,1.1) !important;
+        -moz-transform: scale(1.07,1.1) !important;
+        -ms-transform: scale(1.07,1.1) !important;
+        transform: scale(1.07,1.1) !important;
+
+        -webkit-transition: all 0.6s !important;
+        -moz-transition: all 0.6s !important;
+        -ms-transition: all 0.6s !important;
+        transition: all 0.6s !important;
+    }
+
+
+#lleo_dialog #lleo_picOuter {
+    position: absolute !important;
+    float: right !important;
+    top: 4px;
+    right: 5px;
+    z-index: 9 !important;
+    display: none !important;
+    width: 100px !important;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_picOuter {
+        right: 25px;
+    }
+#lleo_dialog .lleo_has_pic #lleo_picOuter {
+    display: block !important;
+}
+    #lleo_dialog #lleo_picOuter:hover {
+        width: auto !important;
+        z-index: 11 !important;
+    }
+#lleo_dialog #lleo_pic,
+#lleo_dialog #lleo_picBig {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    border: solid 2px #fff !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+    z-index: 1 !important;
+}
+#lleo_dialog #lleo_pic {
+	position: relative !important;
+    border: none !important;
+	width: 30px !important;
+}
+#lleo_dialog #lleo_picBig {
+    box-shadow: -1px 2px 4px rgba(0,0,0,0.3);
+    z-index: 2 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+    #lleo_dialog #lleo_picOuter:hover #lleo_picBig {
+        visibility: visible !important;
+        opacity: 1 !important;
+        -webkit-transition: opacity 0.3s !important;
+        -webkit-transition-delay: 0.3s !important;
+    }
+#lleo_dialog #lleo_transcription {
+    margin: 0 80px 4px 31px !important;
+    color: #aaaaaa !important;
+}
+#lleo_dialog .lleo_no_trans {
+    color: #aaa !important;
+}
+
+#lleo_dialog .ll-translation-counter {
+	float: right !important;
+    font-size: 11px !important;
+    color: #aaa !important;
+    padding: 2px 2px 1px 10px !important;
+}
+
+#lleo_dialog .ll-translation-text {
+	float: left !important;
+	/*width: 80% !important;*/
+}
+
+#lleo_dialog #lleo_trans a {
+    color: #3F669F !important;
+    text-decoration: none !important;
+    text-overflow: ellipsis !important;
+    padding: 1px 4px !important;
+    overflow: hidden !important;
+    float: left !important;
+    width: 320px !important;
+}
+
+#lleo_dialog .ll-translation-item {
+    color: #3F669F !important;
+    border: solid 1px #fff !important;
+    padding: 3px !important;
+    width: 100% !important;
+    float: left !important;
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+}
+
+#lleo_dialog .ll-translation-item:hover {
+	border: solid 1px #9FC2C9 !important;
+    background: #EDF4F6 !important;
+	cursor: pointer !important;
+}
+#lleo_dialog .ll-translation-item:hover .ll-translation-counter {
+	color: #83a0a6 !important;
+}
+
+#lleo_dialog .ll-translation-marker {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAWSURBVBhXY7RPm/+fAQkwIXNAbMICAJQ8AkvqWg/SAAAAAElFTkSuQmCC) !important;
+    display: inline-block !important;
+    width: 4px !important;
+    height: 4px !important;
+    margin: 7px 5px 2px 2px !important;
+    float: left !important;
+}
+
+#lleo_dialog #lleo_icons {
+    color: #aaa !important;
+    font-size: 11px !important;
+    background: #f8f8f8 !important;
+    padding: 10px 10px 10px 16px !important;
+}
+#lleo_icons a {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 10px -4px 3px !important;
+    text-decoration: none !important;
+    opacity: 0.5 !important;
+    background: url(data:image/png;base64,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) !important;
+}
+#lleo_icons a:hover {
+    opacity: 1 !important;
+}
+#lleo_icons a.lleo_google     {background-position:-34px 0 !important;}
+#lleo_icons a.lleo_multitran  {background-position:-64px 0 !important;}
+#lleo_icons a.lleo_lingvo     {background-position:-51px 0 !important; width: 12px !important;}
+#lleo_icons a.lleo_dict       {background-position:-17px 0 !important;}
+#lleo_icons a.lleo_linguee    {background-position:-81px 0 !important;}
+#lleo_icons a.lleo_michaelis  {background-position:-98px 0 !important;}
+
+#lleo_dialog #lleo_contextContainer {
+    margin: 0 !important;
+    padding: 3px 15px 8px 10px !important;
+    background: #eee !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
+    background: -moz-linear-gradient(-90deg, #fff, #eee) !important;
+    border-bottom: solid 1px #ddd !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+#lleo_dialog .lleo_has_context #lleo_contextContainer {
+    display: block !important;
+}
+#lleo_dialog #lleo_context {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    line-height: 12px !important;
+    font-size: 11px !important;
+    margin-left: 2px !important;
+}
+#lleo_dialog #lleo_context b {
+    line-height: 12px !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+}
+/*#lleo_dialog #lleo_gBrand {
+    color: #aaa !important;
+    font-size: 10px !important;
+    *//*padding-right: 52px !important;*//*
+    padding-bottom: 14px !important;
+    margin: -3px 4px 0 4px !important;
+    background: left bottom url(data:image/png;base64,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) no-repeat !important;
+    display: inline-block !important;
+    float: right !important;
+}
+#lleo_dialog #lleo_gBrand.hidden {
+    display: none !important;
+}*/
+#lleo_dialog #lleo_translateContextLink {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
+    background: -moz-linear-gradient(-90deg, #f4f4f4, #ddd) !important;
+    border: solid 1px !important;
+    box-shadow: 1px 1px 0 #f6f6f6 !important;
+    border-color: #999 #aaa #aaa #999 !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    padding: 0 3px !important;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    margin: 1px 5px 0 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+}
+#lleo_dialog #lleo_translateContextLink:hover {
+    background: #f8f8f8 !important;
+}
+#lleo_dialog #lleo_translateContextLink.hidden {
+    visibility: hidden !important;
+}
+
+#lleo_dialog #lleo_setTransForm {
+    display: block !important;
+    margin-top: 3px !important;
+    padding-top: 5px !important;
+    /* Set position and background because the form might be overlapped by an image when no translations */
+    position: relative !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    padding-bottom: 10px !important;
+    padding-left: 16px !important;
+}
+#lleo_dialog .lleo-custom-translation {
+    padding: 4px 5px !important;
+    border: solid 1px #ddd !important;
+	border-radius: 2px !important;
+    width: 90% !important;
+    min-width: 270px !important;
+    background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
+    background: -moz-linear-gradient(-90deg, #f1f1f1, #fff) !important;
+	font: normal 13px Arial, Helvetica !important;
+	line-height: 15px !important;
+}
+#lleo_dialog .lleo-custom-translation:hover {
+    border: solid 1px #aaa !important;
+}
+#lleo_dialog .lleo-custom-translation:focus {
+    background: #FFFEC9 !important;
+}
+
+#lleo_dialog *.hidden {
+    display: none !important;
+}
+
+#lleo_dialog .infinitive{
+    color: #D56E00 !important;
+    text-decoration: none;
+    border-bottom: 1px dotted #D56E00 !important;
+}
+#lleo_dialog .infinitive:hover{
+    border: none !important;
+}
+
+#lleo_dialog .lleo_separator {
+    height: 1px !important;
+    background: #eee;
+    margin-top: 10px !important;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, #eee 8%, rgba(255,255,255,1) 80%) !important;
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+}
+#lleo_dialog #lleo_trans {
+    /*border-top: 1px solid #eeeeee !important;*/
+    padding: 5px 30px 0 14px !important;
+    zoom: 1;
+}
+
+#lleo_dialog .lleo_clearfix {
+	display: block !important;
+	clear: both !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	font-size: 0 !important;
+}
+
+
+#lleo_dialog #lleo_picOuter table {
+    width: 44px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    vertical-align: middle !important;
+}
+
+#lleo_dialog #lleo_picOuter td {
+    width: 38px !important;
+    height: 38px !important;
+    /*border: 1px solid #eeeeee !important;*/
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+#lleo_dialog #lleo_picOuter td div {
+	height: 38px !important;
+	overflow: hidden !important;
+}
+
+#lleo_dialog .lleo_empty {
+    margin: 0 5px 7px !important;
+}
+
+#lleo_youtubeExportBtn {
+    margin-left: 10px;
+    height: 24px;
+}
+    #lleo_youtubeExportBtn i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: 0 0 url(https://d144fqpiyasmrr.cloudfront.net/plugins/all/images/i16.png) !important;
+    }
+    #lleo_youtubeExportBtn .yt-uix-button-content {
+        font-size: 12px;
+        line-height: 2px;
+    }
+
+
+/*** Parsed Lyrics Content *****************************/
+
+.lleo_lyrics tran {
+    background: transparent !important;
+    border-radius: 2px !important;
+    text-shadow: none !important;
+    cursor: pointer !important;
+}
+    .lleo_lyrics tran:hover {
+        color: #fff !important;
+        background: #C77213 !important;
+        -webkit-transition: all 0.1s !important;
+        -moz-transition: all 0.1s !important;
+        -ms-transition: all 0.1s !important;
+        -o-transition: all 0.1s !important;
+        transition: all 0.1s !important;
+    }
+
+.lleo_songName {
+    border: solid 1px #ffd47c;
+    background: #fff1c2;
+    border-radius: 2px;
+}
+
+.lleo_hidden_iframe {
+    visibility: hidden;
+}</style><script src="./toneKomutu_files/header.js.indir"></script><script src="./toneKomutu_files/footer.js.indir"></script><script src="./toneKomutu_files/newsletter-modal.js.indir"></script><script src="./toneKomutu_files/login.js.indir"></script></head>
+
+<body style="zoom: 1;"><div class="icons" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg">
+  <symbol viewBox="0 0 18 18" id="icon-Global-Menu_Home-BBCube">
+    <title>Toggle Navigation</title>
+    <g>
+      <path d="M4 3.158C4 3.623 3.623 4 3.158 4H.842C.377 4 0 3.623 0 3.158V.842C0 .377.377 0 .842 0h2.316C3.623 0 4 .377 4 .842v2.316zM18 3.158c0 .465-.377.842-.842.842h-2.316C14.377 4 14 3.623 14 3.158V.842c0-.465.377-.842.842-.842h2.316c.465 0 .842.377.842.842v2.316zM11 3.158c0 .465-.377.842-.842.842H7.842C7.377 4 7 3.623 7 3.158V.842C7 .377 7.377 0 7.842 0h2.316c.465 0 .842.377.842.842v2.316zM4 17.158c0 .465-.377.842-.842.842H.842C.377 18 0 17.623 0 17.158v-2.316C0 14.377.377 14 .842 14h2.316c.465 0 .842.377.842.842v2.316zM18 17.158c0 .465-.377.842-.842.842h-2.316c-.465 0-.842-.377-.842-.842v-2.316c0-.465.377-.842.842-.842h2.316c.465 0 .842.377.842.842v2.316zM11 17.158c0 .465-.377.842-.842.842H7.842C7.377 18 7 17.623 7 17.158v-2.316c0-.465.377-.842.842-.842h2.316c.465 0 .842.377.842.842v2.316zM4 10.158c0 .465-.377.842-.842.842H.842C.377 11 0 10.623 0 10.158V7.842C0 7.377.377 7 .842 7h2.316c.465 0 .842.377.842.842v2.316zM18 10.158c0 .465-.377.842-.842.842h-2.316c-.465 0-.842-.377-.842-.842V7.842c0-.465.377-.842.842-.842h2.316c.465 0 .842.377.842.842v2.316zM11 10.158c0 .465-.377.842-.842.842H7.842C7.377 11 7 10.623 7 10.158V7.842C7 7.377 7.377 7 7.842 7h2.316c.465 0 .842.377.842.842v2.316z"></path>
+    </g>
+  </symbol>
+  <symbol viewBox="0 0 130.208 28.333" id="icon-Global-WebApp_Compressed">
+    <title>Create Logo</title>
+    <g>
+      <path d="M51.066 14.02c0-6.424-5.416-11.655-12.082-11.655-.612 0-1.24.045-1.854.13-5.18.738-8.646 4.463-10.588 7.32-1.942-2.856-5.41-6.58-10.583-7.32-.62-.085-1.243-.13-1.86-.13-6.663 0-12.084 5.23-12.084 11.654 0 6.425 5.422 11.654 12.082 11.654.615 0 1.242-.047 1.862-.13 5.175-.744 8.64-4.467 10.583-7.33 1.942 2.863 5.407 6.586 10.588 7.33.615.083 1.243.13 1.863.13 6.656 0 12.073-5.228 12.073-11.655zm-35.69 7.432c-.43.062-.856.097-1.28.097-4.384 0-7.95-3.38-7.95-7.53S9.71 6.49 14.1 6.49c.42 0 .848.034 1.275.093 4.88.698 7.865 5.508 8.877 7.433-1.016 1.932-4 6.74-8.877 7.434zm13.463-7.433c1.007-1.93 3.995-6.736 8.87-7.434.426-.06.857-.093 1.273-.093 4.387 0 7.95 3.38 7.95 7.527 0 4.15-3.563 7.53-7.943 7.53-.42 0-.855-.035-1.282-.097-4.874-.695-7.86-5.505-8.87-7.434z"></path>
+      <rect x="10.77" y="12.884" width="7.257" height="2.335"></rect>
+      <polygon points="39.79,15.219 42.246,15.219 42.246,12.884 39.79,12.884 39.79,10.422 37.45,10.422 37.45,12.884 34.989,12.884 34.989,15.219 37.45,15.219 37.45,17.68 39.79,17.68"></polygon>
+      <path d="M51.934 2.826c-.09-.21-.215-.393-.365-.542-.15-.15-.33-.27-.53-.36-.207-.09-.426-.134-.66-.134-.237 0-.46.043-.663.133-.204.09-.382.21-.53.36-.15.15-.274.334-.364.543-.088.208-.135.432-.135.68 0 .233.047.46.135.67.09.218.214.397.363.55.15.154.327.274.53.362.205.09.428.137.663.137.235 0 .453-.045.66-.137.202-.088.38-.208.53-.36.148-.154.274-.334.364-.55.088-.21.133-.44.133-.672 0-.248-.045-.472-.133-.68zm-.375 1.2c-.066.162-.16.3-.28.42-.123.122-.257.217-.41.29-.15.07-.312.107-.49.107-.18 0-.35-.038-.502-.107-.16-.073-.292-.168-.41-.29-.114-.12-.206-.258-.273-.42-.065-.16-.1-.332-.1-.52s.035-.364.1-.527c.067-.17.16-.308.273-.43.118-.12.25-.214.41-.28.153-.067.322-.102.5-.102.18 0 .343.035.493.1.153.068.288.162.41.283.12.123.214.26.28.43.068.162.104.338.104.525 0 .188-.035.36-.105.522zM50.745 3.67c.096-.044.168-.115.22-.2.053-.083.08-.178.08-.28 0-.162-.06-.302-.172-.42-.116-.12-.31-.176-.582-.176-.104 0-.195 0-.276.008-.082.004-.16.01-.236.018v1.69h.427v-.556h.172l.297.557h.48l-.41-.64zm-.424-.227c-.057 0-.098-.004-.126-.013v-.455c.028-.008.075-.017.138-.017.182 0 .273.085.273.245 0 .162-.093.24-.284.24z"></path>
+    </g>
+    <g>
+      <path d="M79.724 11.917c0-1.647-.737-2.264-2.487-2.264h-2.162v4.426h2.248c1.338-.002 2.4-.5 2.4-2.163z"></path>
+      <polygon points="96.968,15.502 100.691,15.502 98.821,9.91"></polygon>
+      <path d="M58.66 2.498v23.074h69.573V2.498H58.66zm9.002 17.276c-3.07 0-5.147-1.664-5.147-5.678 0-3.74 2.145-5.8 5.3-5.8 1.133 0 2.3.276 2.934.67l-.464 1.287c-.635-.515-1.63-.755-2.505-.755-2.538 0-3.79 1.647-3.79 4.563 0 3.02 1.252 4.53 3.774 4.53 1.115 0 2.264-.326 2.796-.67l.344 1.168c-.875.463-2.04.686-3.242.686zm12.44-.172l-2.402-4.34h-2.625v4.34h-1.39V8.453h3.604c2.812 0 3.893 1.183 3.893 3.413 0 1.56-.79 2.642-2.076 3.122l2.642 4.615H80.1zm11.94-9.95h-6.175v3.637h5.593v1.183h-5.593v3.91h6.176v1.22h-7.565V8.45h7.565v1.202zm10.02 9.95l-.995-2.95H96.59l-.96 2.95h-1.39l3.894-11.15h1.475l3.91 11.15h-1.457zm11.12-9.95h-3.842v9.95h-1.39v-9.95h-3.86v-1.2h9.092v1.2zm10.054 0h-6.176v3.637h5.593v1.183h-5.593v3.91h6.176v1.22h-7.565V8.45h7.566v1.202z"></path>
+    </g>
+  </symbol>
+  <symbol viewBox="0 0 24.202 24.276" id="icon-Global-user-profile">
+    <title>User Profile</title>
+    <path d="M20.912 19.718h-1c0-3.827-.883-6.2-5.28-6.2h-5.44c-4.397 0-5.28 2.23-5.28 5.825h-1v-.115c.017-3.337.81-6.71 6.28-6.71h5.44c5.534 0 6.28 3.64 6.28 7.2zM11.95 13.156c-2.464 0-4.468-2.1-4.468-4.68s2.004-4.68 4.467-4.68c2.462 0 4.466 2.1 4.466 4.68s-2.004 4.68-4.467 4.68zm0-8.36c-1.913 0-3.468 1.65-3.468 3.68 0 2.03 1.555 3.68 3.467 3.68 1.91 0 3.466-1.65 3.466-3.68 0-2.03-1.555-3.68-3.467-3.68zM12.034 23.98C5.436 23.98.07 18.61.07 12.013S5.435.05 12.033.05 24 5.415 24 12.013 18.63 23.98 12.033 23.98zm0-22.43C6.264 1.55 1.57 6.242 1.57 12.013S6.262 22.48 12.033 22.48 22.5 17.783 22.5 12.013 17.803 1.55 12.033 1.55z"></path>
+  </symbol>
+  <symbol viewBox="0 0 20.597 18.807" id="icon-Home-Grid-Open_in_new">
+    <title>Open Link in New Tab</title>
+    <rect x="14.542" y="-.105" transform="matrix(-.707 -.707 .707 -.707 23.247 19.503)" width="2.241" height="10.084"></rect>
+    <path d="M20.597 1.123c0-.62-.5-1.12-1.12-1.12h-7.843V2h6.93v6.966h2.033V1.123zM19.24 18.807H1.356c-.747 0-1.355-.64-1.355-1.424V1.426C0 .64.608.003 1.355.003H8.24l.03 1.982H1.99l-.03 14.807h16.604v-3.988h2.032v4.58c0 .784-.608 1.423-1.355 1.423z"></path>
+  </symbol>
+</svg></div>
+    
+<div id="header" class="temporary"><header id="ino-header">
+
+  <nav class="arduino-nav">
+
+    <!-- logo -->
+    <div class="logo">
+      <a href="https://www.arduino.cc/" class="logo-link" role="button" aria-label="Homepage"></a>
+      <a href="https://www.arduino.cc/" class="logo-link-resellers" role="button" aria-label="Resellers Homepage"></a>
+    </div>
+
+    <!-- main nav -->
+    <div class="main-nav" style="">
+
+      <ul class="ul-burger">
+        <li class="burger-menu">
+          <a class="burger"><img src="./toneKomutu_files/burger_menu.svg" alt="Open Navigation"></a>
+          </li>
+      </ul>
+
+      <ul class="nav-left">
+
+        <!-- search form mobile -->
+        <li class="level-1 show-mobile search-container">
+          <a id="search-bar-mobile">
+            <form role="search" id="searchform-mobile" method="GET" action="https://www.google.com/search">
+              <input type="hidden" name="ie" value="UTF-8">
+              <input type="hidden" name="oe" value="UTF-8">
+              <input type="text" placeholder="Search" value="" name="q" title="" class="search-typing" aria-label="search">
+              <i class="clear-icon">×</i>
+              <input type="hidden" name="domains" value="https://www.arduino.cc" class="fill-it">
+              <input type="hidden" name="sitesearch" value="https://www.arduino.cc" class="fill-it">
+            </form>
+          </a>
+        </li>
+        <!-- search form end -->
+
+        <!-- user menu mobile -->
+        <li class="user-mobile level-1 signin-mobile">
+          <div class="login-button" style="display: block;">
+            <a href="https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/">Sign In</a>
+          </div>
+        </li>
+        <li class="user-mobile profile-mobile level-1">
+          <div class="auth-required" style="display: none;">
+              <a href="https://id.arduino.cc/">Profile</a>
+            </div>
+        </li>
+        <li class="logout user-mobile signout-mobile level-1">
+          <div class="auth-required" style="display: none;">
+            <a>Sign Out</a>
+          </div>
+        </li>
+        <!-- user menu mobile end -->
+
+        <li class="level-1" id="home">
+          <a href="https://www.arduino.cc/">Home</a>
+        </li>
+
+        <li class="has-submenu level-1">
+          <a role="button" id="buy">Buy</a>
+          <ul class="nav-submenu">
+            <li><a href="https://store.arduino.cc/">Store</a></li>
+            <li><a href="https://store.arduino.cc/distributors">Distributors</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu level-1" id="software">
+          <a role="button">Software</a>
+          <ul class="nav-submenu">
+            <li><a href="https://create.arduino.cc/" target="_blank">Online Tools</a></li>
+            <li><a href="https://www.arduino.cc/en/Main/Software">Downloads</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu level-1" id="products">
+          <a role="button">Products</a>
+          <ul class="nav-submenu">
+            <li><a href="https://www.arduino.cc/en/Main/Products">Arduino</a></li>
+            <li><a href="https://www.arduino.cc/en/ArduinoAtHeart/Products">AtHeart</a></li>
+            <li><a href="https://www.arduino.cc/en/ArduinoCertified/Products">Certified</a></li>
+          </ul>
+        </li>
+
+        <li class="level-1" id="education">
+          <a href="https://www.arduino.cc/en/Main/Education">
+            <span class="full">Education</span>
+            <span class="shorten">Edu</span>
+          </a>
+        </li>
+
+        <li class="has-submenu level-1" id="resources">
+          <a role="button">Resources</a>
+          <ul class="nav-submenu">
+            <li><a href="https://www.arduino.cc/en/Guide/HomePage">Getting Started</a></li>
+            <li><a href="https://www.arduino.cc/en/Tutorial/HomePage">Tutorials</a></li>
+            <li><a href="https://www.arduino.cc/reference/en">Reference</a></li>
+          </ul>
+        </li>
+
+
+        <li class="has-submenu level-1" id="community">
+          <a role="button">Community</a>
+          <ul class="nav-submenu">
+            <li><a href="https://forum.arduino.cc/">Forum</a></li>
+            <li><a href="https://blog.arduino.cc/">Blog</a></li>
+            <li><a href="https://create.arduino.cc/projecthub" target="_blank" rel="noopener">Project Hub</a></li>
+            <li><a href="https://www.arduino.cc/en/aug">Arduino User Groups</a></li>
+            <li><a href="http://playground.arduino.cc/">Playground</a></li>
+          </ul>
+        </li>
+
+
+        <li class="has-submenu level-1" id="help">
+          <a role="button">Help</a>
+          <ul class="nav-submenu">
+            <li><a href="https://www.arduino.cc/en/Main/FAQ">FAQ</a></li>
+            <li><a href="https://www.arduino.cc/en/ContactUs">Contact Us</a></li>
+            <li><a href="https://store.arduino.cc/store-support">Store Support</a></li>
+          </ul>
+        </li>
+
+        <!-- fake mobile button -->
+        <li class="level-1">
+          <div class="show-mobile fake-button">
+          </div>
+        </li>
+        <!-- fake mobile button end -->
+
+      </ul>
+      <!-- main nav end -->
+
+      <!-- nav right -->
+      <ul class="nav-right">
+
+        <!-- search form -->
+        <li class="level-1 header-hide-mobile">
+          <a id="search-bar">
+          <form role="search" id="searchform" method="GET" action="https://www.google.com/search">
+            <input type="hidden" name="ie" value="UTF-8">
+            <input type="hidden" name="oe" value="UTF-8">
+            <input type="text" placeholder="Search" value="" name="q" title="" class="search-typing">
+            <i class="clear-icon">×</i>
+            <input type="hidden" name="domains" value="https://www.arduino.cc" class="fill-it">
+            <input type="hidden" name="sitesearch" value="https://www.arduino.cc" class="fill-it">
+          </form>
+          </a>
+        </li>
+        <!-- search form end -->
+
+        <!-- language-selector -->
+        <!--<li class="language-selector has-submenu level-1">
+
+          <a><div class="selected-language eng"></div></a>
+
+          <div class="nav-submenu">
+            <div class="caret"></div>
+            <div class="dropdown-box">
+            <div class="left-col">
+              <h5>Language</h5>
+              <ul>
+              <li><button class="language-btn"><img src="https://cdn.arduino.cc/header-footer/x50yis1pry/images/language_eng.svg"></button>English</li>
+              <li><button class="language-btn"><img src="https://cdn.arduino.cc/header-footer/x50yis1pry/images/language_ita.svg"></button>Italian</li>
+              <li><button class="language-btn"><img src="https://cdn.arduino.cc/header-footer/x50yis1pry/images/language_china.svg"></button>Chinese</li>
+              </ul>
+            </div>
+            <div class="right-col">
+              <h5>Currency</h5>
+              <ul>
+              <li><button class="currency-btn">EUR</button>Euro</li>
+              <li><button class="currency-btn">USD</button>Dollar</li>
+              <li><button class="currency-btn">GBP</button>Pound</li>
+              <li><button class="currency-btn">CHF</button>Franc</li>
+              <li><button class="currency-btn">HUF</button>Forint</li>
+              </ul>
+            </div>
+            </div>
+          </div>
+
+        </li>-->
+        <!-- language-selector end -->
+
+        <!-- quotes start -->
+        <li class="level-1 quotes-dropdown-trigger has-submenu">
+          <a id="quotes-link">
+          <div id="quotes"><span class="badge">0</span><img src="./toneKomutu_files/icon_quotes.svg" alt="Show Quotes"></div>
+          </a>
+
+          <div class="quotes-submenu">
+          <div class="caret"></div>
+          <div class="dropdown-box">
+            <div class="cart-close-button"></div>
+            <p class="loading-content">Loading ...</p>
+
+          </div>
+          </div>
+        </li>
+        <!-- quotes end -->
+
+        <!-- cart start -->
+        <li class="level-1 cart-dropdown-trigger has-submenu">
+          <a id="cart-link">
+          <div id="cart"><span class="badge" style="display: none;">0</span><img src="./toneKomutu_files/cart.svg" alt="Show Cart"></div>
+          </a>
+
+          <div class="cart-submenu">
+          <div class="caret"></div>
+          <div class="dropdown-box">    <div class="cart-close-button"></div>
+    <div class="block block-cart">
+                <div class="block-content">
+                                        <p class="empty">You have no items in your <a href="https://store.arduino.cc/checkout/cart/">shopping cart</a>.</p>
+                                </div>
+    </div>
+</div>
+          </div>
+        </li>
+        <!-- cart end -->
+
+        <!-- geolocation button start -->
+        <li class="level-1 store-location-button has-submenu" title="Select your location">
+          <a>
+            <div class="store-location">
+              <img src="./toneKomutu_files/icon_geolocation.svg">
+            </div>
+          </a>
+
+          <div class="nav-submenu">
+            <div class="caret"></div>
+            <div class="dropdown-box">
+              <div class="cart-close-button"></div>
+              <p class="empty eu-africa">
+                Not shopping from Africa or Europe?
+                <a class="change-location">Change location here.</a>
+              </p>
+              <p class="empty america-asia">
+                Not shopping from America, Asia or Oceania?
+                <a class="change-location">Change location here.</a>
+              </p>
+            </div>
+          </div>
+        </li>
+        <!-- geolocation end -->
+
+        <li class="level-1">
+          <div class="login-button" style="display: block;">
+            <a href="https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/">
+              <span>Sign In</span>
+            </a>
+          </div>
+        </li>
+
+        <li class="profile-dropdown auth-required has-submenu level-1" style="display: none;">
+          <a class="submenu-toggle profile">
+            <img class="user" src="./toneKomutu_files/global_user_profile.svg">
+            <svg class="default">
+              <use xlink:href="#icon-Global-user-profile"></use>
+            </svg>
+            <span class="badge">0</span>
+          </a>
+
+          <div class="nav-submenu">
+            <div class="caret"></div>
+            <div class="dropdown-box">
+              <ul>
+                <li>
+                  <a href="https://id.arduino.cc/">Profile</a>
+                </li>
+                <li class="forum-messages">
+                  <a href="https://forum.arduino.cc/index.php?action=pm">Messages</a>
+                </li>
+                <li class="logout">
+                  <a>Sign Out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </li>
+
+      </ul>
+      <!-- nav right -->
+    </div>
+  </nav>
+
+</header>
+</div>
+
+    <div id="reference">
+      <div class="container row">
+        <div class="first-column">
+          <div class="sidebar-nav">
+            <ul class="documentation-page-nav">
+    <li class="has-submenu">
+        <div class="bullet-icon">
+            <span class="icon"></span>
+            <span class="line"></span>
+        </div>
+        <a class="parent" href="https://www.arduino.cc/reference/en/#page-title">Language</a>
+        <ul class="reference-menu">
+            <li><a class="functions active" href="https://www.arduino.cc/reference/en/#functions">functions</a></li>
+            <li><a class="variables" href="https://www.arduino.cc/reference/en/#variables">variables</a></li>
+            <li><a class="structure" href="https://www.arduino.cc/reference/en/#structure">structure</a></li>
+        </ul>
+    </li>
+    <li>
+        <div class="bullet-icon">
+            <span class="icon"></span>
+            <span class="line"></span>
+        </div>
+        <a href="https://www.arduino.cc/en/Reference/Libraries">Libraries</a>
+    </li>
+    <li>
+        <div class="bullet-icon">
+            <span class="icon"></span>
+            <span class="line"></span>
+        </div>
+        <a href="https://www.arduino.cc/glossary/en">Glossary</a>
+    </li>
+</ul>
+
+<div class="licence">
+    <p>
+        The Arduino Reference text is licensed under a <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">Creative Commons Attribution-Share Alike 3.0 License</a>.
+    </p>
+    <p>
+       Find anything that can be improved? <a href="https://github.com/arduino/reference-en" target="_blank" rel="noopener">Suggest corrections and new documentation via GitHub.</a> 
+    </p>
+    <p>
+       Doubts on how to use Github? Learn everything you need to know in <a href="https://create.arduino.cc/projecthub/Arduino_Genuino/contribute-to-the-arduino-reference-af7c37" target="_blank" rel="noopener">this tutorial</a>. 
+    </p>
+</div>
+
+            <div>
+	<p class="last-github-update-timestamp">Last Update: 3/9/2018</p>
+	<a id="edit-page-btn" href="https://github.com/arduino/reference-en/edit/master/Language/Functions/Advanced%20IO/tone.adoc" class="primary-button" role="button" language="en" path="Language/Functions/Advanced IO/tone.adoc">Edit This Page</a>	
+</div>
+          </div>
+        </div>
+
+        <div class="single-page">
+          
+
+
+
+
+
+
+<div class="breadcrumbs">
+    <a href="https://www.arduino.cc/reference/en/">Reference</a>
+    
+      
+      
+        
+          <span>
+            &gt; <a href="https://www.arduino.cc/reference/en/">Language</a>
+          </span>
+        
+        
+      
+    
+      
+      
+        
+          <span>
+            &gt; <a href="https://www.arduino.cc/reference/en/#functions"> Functions</a>
+          </span>
+        
+        
+      
+    
+      
+      
+        
+          <span>
+            &gt; Advanced io
+          </span>
+        
+        
+      
+    
+      
+      
+        
+          <span>
+            &gt; Tone
+          </span>
+        
+        
+      
+    
+      
+      
+    
+</div>
+
+          <h1>tone()</h1>
+          [Advanced I/O]
+          <div id="overview" class="openblock">
+<div class="content">
+<h3 id="_description" class="float">Description</h3>
+<div class="paragraph">
+<p>Generates a square wave of the specified frequency (and 50% duty cycle) on a pin. A duration can be specified, otherwise the wave continues until a call to <a href="https://www.arduino.cc/reference/en/language/functions/advanced-io/noTone">noTone()</a>. The pin can be connected to a piezo buzzer or other speaker to play tones.</p>
+</div>
+<div class="paragraph">
+<p>Only one tone can be generated at a time. If a tone is already playing on a different pin, the call to tone() will have no effect. If the tone is playing on the same pin, the call will set its frequency.</p>
+</div>
+<div class="paragraph">
+<p>Use of the <code>tone()</code> function will interfere with PWM output on pins 3 and 11 (on boards other than the Mega).</p>
+</div>
+<div class="paragraph">
+<p>It is not possible to generate tones lower than 31Hz. For technical details, see <a href="https://github.com/bhagman/Tone#ugly-details">Brett Hagman’s notes</a>.</p>
+</div>
+<h3 id="_syntax" class="float">Syntax</h3>
+<div class="paragraph">
+<p><code>tone(pin, frequency)</code></p>
+</div>
+<div class="paragraph">
+<p><code>tone(pin, frequency, duration)</code></p>
+</div>
+<h3 id="_parameters" class="float">Parameters</h3>
+<div class="paragraph">
+<p><code>pin</code>: the pin on which to generate the tone</p>
+</div>
+<div class="paragraph">
+<p><code>frequency</code>: the frequency of the tone in hertz - <code>unsigned int</code></p>
+</div>
+<div class="paragraph">
+<p><code>duration</code>: the duration of the tone in milliseconds (optional) - <code>unsigned long</code></p>
+</div>
+<h3 id="_returns" class="float">Returns</h3>
+<div class="paragraph">
+<p>Nothing</p>
+</div>
+</div>
+</div>
+<div id="howtouse" class="openblock">
+<div class="content">
+<h3 id="_notes_and_warnings" class="float">Notes and Warnings</h3>
+<div class="paragraph">
+<p>If you want to play different pitches on multiple pins, you need to call <code>noTone()</code> on one pin before calling <code>tone()</code> on the next pin.</p>
+</div>
+</div>
+</div>
+<div id="see_also" class="openblock">
+<div class="content">
+<h3 id="_see_also" class="float">See also</h3>
+<div class="ulist language">
+<ul><li>
+                    <p>
+                      <mark>LANGUAGE</mark>
+                      <a href="https://www.arduino.cc/reference/en/language/functions/advanced-io/notone/">
+                        
+                          noTone()
+                        
+                      </a>
+                    </p>
+                  </li><li>
+                    <p>
+                      <mark>LANGUAGE</mark>
+                      <a href="https://www.arduino.cc/reference/en/language/functions/advanced-io/pulsein/">
+                        
+                          pulseIn()
+                        
+                      </a>
+                    </p>
+                  </li><li>
+                    <p>
+                      <mark>LANGUAGE</mark>
+                      <a href="https://www.arduino.cc/reference/en/language/functions/advanced-io/pulseinlong/">
+                        
+                          pulseInLong()
+                        
+                      </a>
+                    </p>
+                  </li><li>
+                    <p>
+                      <mark>LANGUAGE</mark>
+                      <a href="https://www.arduino.cc/reference/en/language/functions/advanced-io/shiftin/">
+                        
+                          shiftIn()
+                        
+                      </a>
+                    </p>
+                  </li><li>
+                    <p>
+                      <mark>LANGUAGE</mark>
+                      <a href="https://www.arduino.cc/reference/en/language/functions/advanced-io/shiftout/">
+                        
+                          shiftOut()
+                        
+                      </a>
+                    </p>
+                  </li>
+<li>
+<p><mark>LANGUAGE</mark> <a href="https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite">analogWrite()</a></p>
+</li>
+</ul>
+</div>
+<div class="ulist example">
+<ul>
+<li>
+<p><mark>EXAMPLE</mark> <a href="http://arduino.cc/en/Tutorial/Tone" target="_blank">Tone</a></p>
+</li>
+<li>
+<p><mark>EXAMPLE</mark> <a href="http://arduino.cc/en/Tutorial/Tone" target="_blank">Pitch follower</a></p>
+</li>
+<li>
+<p><mark>EXAMPLE</mark> <a href="http://arduino.cc/en/Tutorial/Tone3" target="_blank">Simple Keyboard</a></p>
+</li>
+<li>
+<p><mark>EXAMPLE</mark> <a href="http://arduino.cc/en/Tutorial/Tone4" target="_blank">multiple tones</a></p>
+</li>
+<li>
+<p><mark>EXAMPLE</mark> <a href="http://arduino.cc/en/Tutorial/PWM" target="_blank">PWM</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+        </div>
+
+        
+      </div>      
+    </div>
+    
+<div>
+  <div id="newsletter-modal"><div id="newsletterPopup" class="newsletterModal" style="">
+  <div class="newsletter-modal">
+    <form action="https://api2.arduino.cc/newsletter/subscription" method="post" name="sendy-subscribe-form" id="sendy-subscribe-form" class="form-popup newsletter-modal-dialog">
+      <div class="modalHeader">
+        <h3 style="line-height: 1.8rem;" class="modal-header-alt modal-title">This link has expired. <br>Please re-subscribe to our Newsletters.</h3>
+        <h3 class="modal-header-main modal-title">Subscribe to our Newsletter</h3>
+      </div>
+      <div class="modalBody newsletter-modal-body">
+          <div class="newsletter-email-field">
+            <div class="col-1">
+              <label for="email" class="newsletter-form-label inline">Email</label>
+            </div>
+            <div class="col-2">
+              <input placeholder="Enter your email address" type="email" name="email" class="subscribe-form-input">
+              <p id="emailMissing" class="newsletter-popup-error">Please enter a valid email to subscribe</p>
+            </div>
+          </div>
+          <div>
+            <p class="newsletter-popup-error2" id="newsletterSubscribeStatus"></p>
+          </div>
+      </div>
+      <div class="row modalFooter">
+        <div class="form-buttons-row">
+          
+            <button type="button" value="Cancel" class="close-popup popup-form-button white cancel-modal button">Cancel</button>
+            <button type="submit" name="Subscribe" id="subscribe-submit-btn" class="popup-form-button button">Subscribe</button>
+          
+        </div>
+      </div>
+    </form>
+
+    <!-- step 2, confirm popup -->
+    <div class="confirm-popup newsletter-modal-dialog" style="margin-bottom:1em">
+      <div class="modalHeader">
+        <h3 class="modal-title">Confirm your email address</h3>
+      </div>
+      <div class="modalBody" id="newsletterModalBody" style="padding-right:1em;margin-bottom:0;margin-top:2em">
+          <p style="margin-bottom:1em;font-size:15px">
+            We need to confirm your email address.<br>
+            To complete the subscription, please click the link in the
+            email we just sent you.
+          </p>
+          <p style="margin-bottom:1em;font-size:15px">
+            Thank you for subscribing!
+          </p>
+          <p style="margin-bottom:1em;font-size:15px">
+            Arduino AG<br>
+            Riedstrasse 11<br>
+            6330 Cham<br>
+            Switzerland<br>
+          </p>
+      </div>
+      <div class="row modalFooter">
+        <div class="form-buttons-row">
+          
+            <button name="Ok" class="popup-form-button button close-popup">Ok</button>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal-bg"></div>
+</div>
+  <div id="footer"><div id="footer-block" style="margin-top: 91.2031px;">
+  <div class="newsletter-form">
+    <h4 id="newsletter-input-label">Newsletter</h4>
+    <input id="newsletter-email" aria-labelledby="newsletter-input-label" type="email" name="email" class="email" placeholder="Enter your email to sign up">
+    <button id="subscribe-btn" aria-label="Subscribe" class="button">Subscribe</button>
+  </div>
+  <section class="footer-links-wrapper">
+    <ul id="footer-list">
+      <li>
+        <a href="https://www.arduino.cc/en/Main/TermsOfService">
+          <span class="text">Terms Of Service</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.arduino.cc/en/Main/PrivacyPolicy">
+          <span class="text">Privacy Policy</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.arduino.cc/en/Main/ContactUs">
+          <span class="text">Contact Us</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.arduino.cc/en/Main/AboutUs">
+          <span class="text">About Us</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.arduino.cc/Careers">
+          <span class="text">Careers</span>
+        </a>
+      </li>
+    </ul><!-- footer-list -->
+    <div class="footer-note">
+      <p>
+        <a href="https://www.arduino.cc/en/Main/CopyrightNotice">
+          <span class="text">© 2018 Arduino</span>
+        </a>
+      </p>
+    </div>
+  </section>
+  <ul class="social-btn-list">
+    <li>
+      <a href="https://www.facebook.com/official.arduino" target="_blank" id="facebook" class="facebook" rel="noopener">
+        <img src="./toneKomutu_files/icon-facebook.svg" alt="facebook">
+        <p class="follow-us">follow us on Facebook</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/arduino" target="_blank" id="twitter" class="twitter" rel="noopener">
+        <img src="./toneKomutu_files/icon-twitter.svg" alt="twitter">
+        <p class="follow-us">follow us on Twitter</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/+Arduino" target="_blank" id="gplus" class="gplus" rel="noopener">
+        <img src="./toneKomutu_files/icon-gplus.svg" alt="google plus">
+        <p class="follow-us">follow us on Google+</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/arduino.cc/" target="_blank" id="instagram" class="instagram" rel="noopener">
+        <img src="./toneKomutu_files/icon-instagram.svg" alt="instagram">
+        <p class="follow-us">follow us on Instagram</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/arduino/" target="_blank" id="github" class="github" rel="noopener">
+        <img src="./toneKomutu_files/icon-github.svg" alt="github">
+        <p class="follow-us">Arduino on GitHub</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.flickr.com/photos/arduino_cc" target="_blank" id="flickr" class="flickr" rel="noopener">
+        <img src="./toneKomutu_files/icon-flickr.svg" alt="flickr">
+        <p class="follow-us">follow us on Flickr</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/user/arduinoteam" target="_blank" id="youtube" class="youtube" rel="noopener">
+        <img src="./toneKomutu_files/icon-youtube.svg" alt="youtube">
+        <p class="follow-us">follow us on YouTube</p>
+      </a>
+    </li>
+  </ul>
+
+  <button id="go-top" class="go-top-footer-btn" aria-label="Scroll Top">
+    <span class="arrow-1"></span>
+    <span class="arrow-2"></span>
+    <span class="arrow-3"></span>
+  </button>
+</div><!-- footer-block -->
+</div>
+</div>
+ <script src="./toneKomutu_files/loader.js.indir" type="text/javascript"></script>
+<script>
+    var authOptions = {
+      authURI: "https://auth.arduino.cc/login",
+      redirectURI: window.location.href,
+      clientID: "reference",
+      scopes: ["profile:core", "profile:public"]
+    };
+    ArduinoHeaderAndFooter({auth: 'default', authOptions: authOptions});
+
+    
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-22581631-3', 'auto');
+	ga('send', 'pageview');
+</script>
+<script src="./toneKomutu_files/scripts.js.indir"></script>
+
+</body></html>

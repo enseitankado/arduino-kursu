@@ -1,0 +1,9 @@
+1) http://z3t0.github.io/Arduino-IRremote/adresinden kütüphaneyi indirin.
+2) Taslak-library ekle->Zip kitapligi seceneginden indirilen zip dosyasını yükleyin.
+3) IRRemote başlık dosyasını include edin.
+
+#include <IRremote.h>
+
+
+
+Daha fazlası için zip arşivinde examples dizinini inceleyebilirsiniz.

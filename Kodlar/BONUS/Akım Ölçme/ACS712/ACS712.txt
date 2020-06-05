@@ -1,0 +1,3 @@
+Şu anda 16 bit bir ADC entegresi ve 5 voltluk voltaj referans çipi ve acs nin çıkışına alçak geçiren filtre koyarak ACS yi adam ettim.
+
+220 V da 5 mA AC hassasiyet seviyelerine indim. yada çıktım diyelim.

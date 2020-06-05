@@ -1,0 +1,1 @@
+var IsMatched = true;var admimgsync1 = new Image();admimgsync1.src='https://x.bidswitch.net/sync?ssp=admatic';admimgsync1.width='1';admimgsync1.height='0';admimgsync1.style='width:0px;height:0px;display:none';
