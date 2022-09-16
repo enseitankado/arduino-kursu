@@ -1,6 +1,0 @@
-1) https://github.com/miguelbalboa/rfid adresinden kutuphaneyi indir
-2) Arduino IDE->Taslak->Library ekle->.ZIP seçeneğinden zip dosyasını yukle.
-3) Aşağıdaki başlıkları koda dahil et
-
-#include <SPI.h>
-#include <MFRC522.h>
