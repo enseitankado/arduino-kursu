@@ -1,0 +1,69 @@
+AT COMMAND LISTING
+
+1 AT Test UART Connection
+2 AT+RESET Reset Device
+3 AT+VERSION Querry firmware version
+4 AT+ORGL Restore settings to Factory Defaults
+5 AT+ADDR Query Device Bluetooth Address
+6 AT+NAME Query/Set Device Name
+7 AT+RNAME Query Remote Bluetooth Device’s Name
+8 AT+ROLE Query/Set Device Role
+9 AT+CLASS Query/Set Class of Device CoD
+10 AT+IAC Query/Set Inquire Access Code
+11 AT+INQM Query/Set Inquire Access Mode
+12 AT+PSWD Query/Set Pairing Passkey
+13 AT+UART Query/Set UART parameter
+14 AT+CMODE Query/Set Connection Mode
+15 AT+BIND Query/Set Binding Bluetooth Address
+16 AT+POLAR Query/Set LED Output Polarity
+17 AT+PIO Set/Reset a User I/O pin
+18 AT+MPIO Set/Reset multiple User I/O pin
+19 AT+MPIO? Query User I/O pin
+20 AT+IPSCAN Query/Set Scanning Parameters
+21 AT+SNIFF Query/Set SNIFF Energy Savings Parameters
+22 AT+SENM Query/Set Security & Encryption Modes
+23 AT+RMSAD Delete Authenticated Device from List
+24 AT+FSAD Find Device from Authenticated Device List
+25 AT+ADCN Query Total Number of Device from Authenticated Device List
+26 AT+MRAD Query Most Recently Used Authenticated Device
+27 AT+STATE Query Current Status of the Device
+28 AT+INIT Initialize SPP Profile
+29 AT+INQ Query Nearby Discoverable Devices
+30 AT+INQC Cancel Search for Discoverable Devices
+31 AT+PAIR Device Pairing
+32 AT+LINK Connect to a Remote Device
+33 AT+DISC Disconnect from a Remote Device
+34 AT+ENSNIFF Enter Energy Saving mode
+35 AT+EXSNIFF Exit Energy Saving mode
+
+ERROR CODES
+
+0 Command Error/Invalid Command
+1 Results in default value
+2 PSKEY write error
+3 Device name is too long (>32 characters)
+4 No device name specified (0 length)
+5 Bluetooth address NAP is too long
+6 Bluetooth address UAP is too long
+7 Bluetooth address LAP is too long
+8 PIO map not specified (0 lenght)
+9 Invalid PIO port Number entered
+A Device Class not specified (0 lenght)
+B Device Class too long
+C Inquire Access Code not Specified (0 lenght)
+D Inquire Access Code too long
+E Invalid Iquire Access Code entered
+F Pairing Password not specified (0 lenght)
+10 Pairing Password too long (> 16 characters)
+11 Invalid Role entered
+12 Invalid Baud Rate entered
+13 Invalid Stop Bit entered
+14 Invalid Parity Bit entered
+15 No device in the Pairing List
+16 SPP not initialized
+17 SPP already initialized
+18 Invalid Inquiry Mode
+19 Inquiry Timeout occured
+1A Invalid/zero lenght address entered
+1B Invalid Security Mode entered
+1C Invalid Encryption Mode entered

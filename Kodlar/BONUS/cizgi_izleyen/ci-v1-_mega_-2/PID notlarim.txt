@@ -1,0 +1,52 @@
+﻿/*
+   P: Oransal kontrol yapar. Cikistaki hatayi Kp katsayisi oraninda doğrusal
+   olarak artirip azaltir. Sistem bu durumda; Kp miktarınca dogrusal artan/azalan
+   salınıp yaparak hatayi gidermeye calisir. Cikisi Kp miktarinda salinima
+   goturen dinamik bir cikti uretir.
+
+   I: Integral/tumlev kontrol anlamina gelir.
+   P'de oldugu gibi; oransal cevabın sagladigi dinamik cevaplardan feragat
+   ederek statik dogruluk miktarini artirir. Gecmise donuk hatalari biriktirerek
+   bir duzeltme yapmaya calisir. I, duzeltme yaparken zaman kavramından da yararlanır.
+   Integral  yontemi  cikis sinyalini hata  sinyalinin  integrali  ile  orantılı olarak değiştirir.
+   Belli peryodlarla okunan sinyaller ile olusturulan egrisel alan
+   gecmiste olusan hata ve duzeltme miktarlarina karsilik yeni yapılacak duzeltme miktarlari
+   hakkında topyekun bir bilgi saglar. Integral matematikte alan hesabı icin de kullanilir.
+   I kontrol mekanizmasinda yeni uretilen sinyalin alani hesaplandigi icin sadece ornek
+   alinan zamanlardaki degerler ile islem yapilmamis olur. Alan hesabi zamanin tum anlari
+   icin hesaplanan yaklasik bir deger sunar. Okuma/ornekleme peryodu ne kadar kucuk ise
+   alan o derece dogru hesaplanir. I, olusan hata miktari uzerinde
+   gecmise donuk takip yaptigi icin daha kapsamlı yaklasir.
+   Duzeltmenin gucu Ki kazanc degiskeni ile belirlenir.
+   Integral hatanın alanını bulmak anlamına gelmektedir. Her bir dt çevriminde hata,
+   Ki katsayısıyla çarpılarak toplanır. Integralin çok yükselmesini önlemek için
+   sınırlandırmak gereklidir. Sürekli toplandığı için integral çok artarsa
+   tekrar azalmasını beklemek zaman alır. Bu yüzden integrali sınırlamak,
+   sistemin çabuk toparlamasını sağlayacaktır.
+
+   D: Turevsel (derivative) kontrol, hatadaki anlık degisim orani ile ilgilenir. D'de,
+   I'da oldugu gibi bunu zamana bagli olarak gerceklestirir. Yani zaman, D kontrol mekanizmasinin
+   bagli oldugu parametrelerden biridir. Kd katsayisina bagli olarak hatanin degisim hizini verir.
+   Eger hata sabitse yani degismiyorsa, D bir cikti uretmez.
+   D, P ve I ile birlikte kullanildiginda daha stabil ve hizli calisan sistemler elde
+   edilebilir. Bu kendini, P ve I kazanclarini artirmak seklinde gosterir. Buna karsin
+   ani bir gurultu sistemin dengesini aniden bozabilir.
+
+
+   P+D
+   ---
+   D yontemi sadece hata degistiginde, cikisa katkida bulunur. Bu sebeple, bu yontem;
+   her zaman oransal yontemle ve bazen de bunlara ilave olarak I yontemiyle beraber kullanilir.
+   Keskin virajlardan cikmak icin Kd arttirilabilir. Kd artirilarak
+
+   P+I+D
+   -----
+   Gerekli olmadigi takdirde oransal, integral ve turevsel kontrolun ucunun ayni anda
+   uygualanmasina gerek yoktur. Kontrolcunun mumkun oldugunca basit tutulmasinda fayda vardir.
+   Integral bileseni buyuk yuk degisimleri nedeniyle olusan oransal (P) ofseti azaltmak ve
+   yok etmek icin kullanilir. Turev yontemi de, osilasyon egilimini azaltir ve hata sinyalini
+   onceden sezen bir etki saglar. Turev yontemi ozellikle ani yuk degisimlerinin oldugu proseslerde
+   cok kullanislidir. Diger bir ifadeyle P+I+D yontemi bir veya iki denetim yonteminin hatayi
+   kabul edilebilir sinirlar icerisinde tutamadıgi hizli ve buyu yuk degisimleri olan proseslerde
+   kullanilir.
+*/

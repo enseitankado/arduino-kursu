@@ -1,0 +1,28 @@
+I2C nedir, nasıl çalışır?
+
+1) SCL (clock) ve SDA (data) hatlarını  kullanır. Günümüz teknolojik cihazlarında yaygın olarak kullanılır. Sadece 2 kablo ile birçok cihazın haberleşmesini mümkün kılar.
+2) İletişim Master (efendi) cihaz ile Köle (slave) cihazlar arasında gerçekleşir.
+3) Aynı kabloları kullandığı için her cihazın tekil bir adresi olmalı. Veriyolu üzerinde aynı adrese sahip birden fazla cihaz olursa bu cihazlar çalışmaz. 
+
+
+İŞLEM BASAMAKLARI
+-----------------
+
+1-Taslak->library ekle->.Zip Kitaplığı ekle seçeneklerinde "Arduino-LiquidCrystal-I2C-library-master.zip" kütüphane arşivi dosyası yüklenir.
+
+2- Taslak->library ekle alt menüsünde "Liquid Crystal" yüklenip yüklenmediği kontrol edilir.
+
+(Ayrıca Dosya->Tercihler menü seçeneğinde yer alan "Taslak defteri" konumundaki libraries dizininden de kontrol edilebilir)
+
+3-Yenibir taslağa ya da mevcut boş taslağa aşağıdaki include'lar eklenir:
+
+#include <Wire.h> 
+#include <LiquidCrystal_I2C.h>
+
+4-I2C LCD dönüştürücüsü ile Arduino aşağıdaki gibi bağlanır:
+
+	Köle      Efendi
+	GND -> (-) (Arduino GND)
+	VCC -> (+) (Arduino 5V)
+	SDA -> Data (Arduino A4)
+	SCL -> Clock (Arduino A5)
